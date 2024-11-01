@@ -10,10 +10,10 @@ export const Global = createGlobalStyle`
   outline: none;
   font-size: 16px;
   box-sizing: border-box;
-  line-Height: "1.1";
-  text-Transform: "none";
-  text-Decoration: "none";
-  letter-Spacing: "0";
+  line-Height: 1.1;
+  text-Transform: none;
+  text-Decoration: none;
+  letter-Spacing: 0;
 }
 img{
   user-select: none; 
