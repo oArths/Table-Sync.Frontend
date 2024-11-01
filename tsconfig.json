@@ -13,8 +13,9 @@
     "allowImportingTsExtensions": true,
     "target": "es2015",
     "lib": ["dom", "es2015"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true 
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "typings"],
   "exclude": ["node_modules", "dist"]
 }
