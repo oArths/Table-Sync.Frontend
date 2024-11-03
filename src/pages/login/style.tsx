@@ -23,10 +23,17 @@ export const Container = styled.aside`
   justify-content: space-between;
   width: 35%;
   height: 100%;
-  
+
   &:last-child {
     width: 60%;
   }
+`;
+export const Reserved = styled.p`
+  display: flex;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.White};
+  width: 90%;
+  font-size: 0.9rem;
 `;
 export const Img = styled.img`
   width: 100%;
@@ -48,7 +55,6 @@ export const WarpText = styled.aside`
   height: 100%;
   gap: 70px;
   margin-top: 40px;
- 
 `;
 
 export const Description = styled.h3`
@@ -73,7 +79,7 @@ export const WarpInput = styled.div`
   width: 100%;
   flex-direction: column;
   align-items: start;
-  `;
+`;
 export const Label = styled.label`
   color: ${({ theme }) => theme.colors.White};
   margin-bottom: 11px;

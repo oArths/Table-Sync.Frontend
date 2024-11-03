@@ -33,7 +33,7 @@ export default function Login() {
               background={currentTheme.colors.Blue270}
             />
           </S.WarpText>
-          <p>℗ 2024 Arthur Ferreira, All rigths reserved. </p>
+          <S.Reserved>℗ 2024 Arthur Ferreira, All rigths reserved. </S.Reserved>
         </S.Container>
         <S.Container>
           <S.Img src={LoginImage} alt="mulher segurando um notebook" />
