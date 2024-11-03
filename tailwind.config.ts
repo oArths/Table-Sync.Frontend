@@ -8,8 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        sans:['var(--tajawal)']
+      fontFamily: {
+        sans: ["var(--tajawal)"],
+      },
+      screens: {
+        "laptop-md": "1024px",
+        "laptop-lg": "1280px",
+        "desktop": "1366px",
+        "desktop-lg": "1440px",
+        "desktop-xl": "1600px",
+        "ultrawide": "1920px",
+        "4k": "2560px",
       },
     },
     colors: {
@@ -54,8 +63,7 @@ const config: Config = {
 
       pink100: "rgb(68, 23, 41)",
       pink200: "rgb(242, 64, 127)",
-
-    }
+    },
   },
   plugins: [],
 };
