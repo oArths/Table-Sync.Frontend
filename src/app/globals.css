@@ -21,3 +21,11 @@ img {
   -webkit-user-select: none;
   -webkit-user-drag: none;
 }
+input:-webkit-autofill {
+  @apply bg-primary200 text-white border border-primary100;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  @apply bg-primary200 text-white border-blue200;
+}
