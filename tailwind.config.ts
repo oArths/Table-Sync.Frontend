@@ -12,6 +12,7 @@ const config: Config = {
         sans: ["var(--tajawal)"],
       },
       screens: {
+        "laptop": "1000px",
         "laptop-md": "1024px",
         "laptop-lg": "1280px",
         "desktop": "1366px",
