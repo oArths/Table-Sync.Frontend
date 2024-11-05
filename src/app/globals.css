@@ -21,6 +21,10 @@ img {
   -webkit-user-select: none;
   -webkit-user-drag: none;
 }
+.h-screen-minus-80 {
+  height: calc(100vh - 4rem);
+}
+
 input:-webkit-autofill {
   @apply bg-primary200 text-white border border-primary100;
 }
