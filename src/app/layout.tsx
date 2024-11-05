@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Tajawal } from "next/font/google";
-
+import { Header } from "./template/header/index";
 const tajawal = Tajawal({
   weight: ["200", "300", "400", "500", "700", "800", "900"],
   variable: "--tajawal",
@@ -10,7 +10,7 @@ const tajawal = Tajawal({
 export const metadata: Metadata = {
   title: "Table Sync",
   description: "gerenciador de tabelas",
-  icons: '/favicon.svg'
+  icons: "/favicon.svg",
 };
 
 export default function RootLayout({
@@ -20,8 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      {/* <-- create by Arthur Ferreira --> */}
-      <body className={`${tajawal.variable} font-sans`}>{children}</body>
+      <body
+        id="modal"
+        className={`${tajawal.variable} font-sans flex flex-col items-start h-dvh`}
+      >
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

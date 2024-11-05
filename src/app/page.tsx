@@ -1,4 +1,4 @@
-import SuspenseImage from "./suspenseImage";
+import SuspenseImage from "./shared/suspenseImage";
 import Form from "./form";
 export default function Login() {
   return (
