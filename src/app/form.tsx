@@ -3,7 +3,7 @@ import { UserContent } from "./zodValidation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-import { Button } from "@/components/button";
+import { Button } from "@/app/components/button";
 export default function Form() {
   const [loading, setLoading] = useState(false);
   const {
@@ -74,7 +74,7 @@ export default function Form() {
         disabled={loading}
         type="submit"
         className=" mt-10 xl:mt-18 desktop:mt-12 desktop-lg:mt-20 "
-        title="Entrar"
+        title={loading ? "" : "Entrar"}
       />
     </form>
   );
