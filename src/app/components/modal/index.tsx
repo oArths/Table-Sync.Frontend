@@ -1,15 +1,26 @@
+"use client";
+import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
+
 interface IModal {
   isOpen: boolean;
   children: React.ReactNode;
 }
 
 export default function Modal({ isOpen, children }: IModal) {
-  let element = document.getElementById("modal");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+  const element = document.getElementById("modal");
   if (!element) {
-    return;
+    return null;
   }
-  if (isOpen) {
-    return ReactDOM.createPortal(<div>{children}</div>, element);
-  }
+
+  return isOpen ? ReactDOM.createPortal(<div>{children}</div>, element) : null;
 }
