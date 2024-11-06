@@ -4,7 +4,7 @@ import { Button } from "../components/button";
 import Filter from "../components/dropdown/filter";
 export default function Home() {
   const [filter, setFilter] = useState(false);
-  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const [selectedOptions, setSelectedOptions] = useState<string[]>(["KU"]);
   const data = ["KU", "KA", "KL", "KD"];
 
   const handleSelect = (selected: string[]) => {
