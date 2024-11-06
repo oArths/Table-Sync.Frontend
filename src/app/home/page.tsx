@@ -2,8 +2,11 @@
 import { useState } from "react";
 import { Button } from "../components/button";
 import Filter from "../components/dropdown/filter";
+import { Download } from "../template/download";
+
 export default function Home() {
   const [filter, setFilter] = useState(false);
+  const [download, setDownload] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<string[]>(["KU"]);
   const data = ["KU", "KA", "KL", "KD"];
 
@@ -27,7 +30,7 @@ export default function Home() {
           />
           <Button
             loading={false}
-            onClick={() => console.log("wd")}
+            onClick={() => setDownload(!download)}
             className=" bg-primary200 ml-12 font-medium text-lg  rounded text-center w-32  h-10 "
             title="Baixar"
           />
@@ -45,6 +48,11 @@ export default function Home() {
             onClick={() => setFilter(!filter)}
             selectedOptions={selectedOptions}
             onSelect={handleSelect}
+          />
+          <Download
+          close={() => setDownload(!download)}
+          open={download}
+          
           />
         </div>
       </nav>
