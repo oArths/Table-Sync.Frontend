@@ -73,7 +73,7 @@ export default function Form() {
         loading={loading}
         disabled={loading}
         type="submit"
-        className=" mt-10 xl:mt-18 desktop:mt-12 desktop-lg:mt-20 "
+        className=" w-full h-10 mt-10 xl:mt-18 desktop:mt-12 desktop-lg:mt-20 "
         title={loading ? "" : "Entrar"}
       />
     </form>
