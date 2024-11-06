@@ -37,7 +37,7 @@ const config: Config = {
       black350: "rgba(40, 40, 42, 0.5)",
       black430: "rgba(59, 59, 61, 0.3)",
 
-      white: "rgb(255, 255, 255)",
+      white: "rgb(245, 245, 245)",
       black: "rgb(0, 0, 0)",
 
       gray100: "rgb(73, 72, 72)",
