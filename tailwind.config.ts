@@ -8,6 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        fadeInDown: {
+          '0%': { opacity: '0', transform: 'translateY(-10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeOutUp: {
+          '0%': { opacity: '1', transform: 'translateY(0)' },
+          '100%': { opacity: '0', transform: 'translateY(-10px)' },
+        },
+      },
+      animation: {
+        fadeInDown: 'fadeInDown 0.2s ease-out forwards',
+        fadeOutUp: 'fadeOutUp 0.2s ease-out forwards',
+      },
       fontFamily: {
         sans: ["var(--tajawal)"],
       },
