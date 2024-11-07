@@ -9,10 +9,20 @@ interface IModal {
 
 export default function Modal({ isOpen, children }: IModal) {
   const [mounted, setMounted] = useState(false);
+  const [showModal, setShowModal] = useState(isOpen);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      const timer = setTimeout(() => setShowModal(false), 300); 
+      return () => clearTimeout(timer); 
+    } else {
+      setShowModal(true); 
+    }
+  }, [isOpen]);
 
   if (!mounted) {
     return null;
@@ -22,5 +32,5 @@ export default function Modal({ isOpen, children }: IModal) {
     return null;
   }
 
-  return isOpen ? ReactDOM.createPortal(<div>{children}</div>, element) : null;
+  return showModal ? ReactDOM.createPortal(<div>{children}</div>, element) : null;
 }
