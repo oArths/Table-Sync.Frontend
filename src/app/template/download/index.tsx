@@ -3,6 +3,8 @@ import * as I from "lucide-react";
 import Modal from "@/app/components/modal";
 import { useState } from "react";
 import { Button } from "@/app/components/button";
+import { DatePickerWithRange } from "../../components/datapiker/datepiker";
+import { DateRange } from "react-day-picker";
 
 
 interface IDownload {
@@ -12,20 +14,23 @@ interface IDownload {
 
 export const Download: React.FC<IDownload> = (props) => {
   const [loading, setLoading] = useState(false);
+  const handleDateChange = (date: DateRange | undefined) => {
+    console.log("Data selecionada:", date);
+  };
 
   return (
     <Modal isOpen={props.open}>
       <div
         onClick={props.close}
-        className="flex items-center justify-center absolute  top-0 w-screen h-screen  bg-black300/50 backdrop-blur-sm  "
+        className={`flex items-center justify-center absolute  top-0 w-screen h-screen ${props.open ? " animate-colorOutUp": "animate-colorInDown" }`}
       >
         <aside
           onClick={(e) => e.stopPropagation()}
-          className="flex flex-col items-center justify-start  w-2/5 h-3/5  rounded  bg-primary100  border border-solid border-black400"
+          className={`flex flex-col items-center justify-start  w-2/6 h-3/6  rounded  bg-primary100  border border-solid border-black400 ${props.open ? " animate-fadeInDown": "animate-fadeOutUp " }`}
         >
-          <div className="w-4/5 flex flex-col items-start  mt-10">
+          <div className="w-4/5 flex flex-col items-start mb-auto  mt-10">
             <aside className="flex w-full flex-row items-center justify-between">
-              <h1 className="text-left h-auto text-4xl w-auto text-white  font-medium">
+              <h1 className="text-left h-auto text-4xl w-auto text-white  font-regular">
                 Baixar Tabela
               </h1>
               <div
@@ -35,18 +40,20 @@ export const Download: React.FC<IDownload> = (props) => {
                 <I.X width="30px" height="30px" color="rgb(212, 212, 212)" />
               </div>
             </aside>
-            <h2 className="text-left text-xl h-auto mt-3 font-medium text-white  ">
+            <h2 className="text-left text-xl h-auto mt-3 font-normal text-white  ">
               Selecione o periodo que deseja baixar
             </h2>
           </div>
-
-         
+          <DatePickerWithRange
+          className=" w-4/5 "
+          onDateChange={handleDateChange}
+          />
 
           <Button
             loading={loading}
             disabled={loading}
             onClick={() => setLoading(!loading)}
-            className=" bg-blue270 h-10 font-medium text-sm  w-4/5  "
+            className=" bg-blue270 h-10 font-medium text-sm mt-auto mb-10 w-4/5   "
             title={loading ? "" : "Baixar"}
           />
         </aside>

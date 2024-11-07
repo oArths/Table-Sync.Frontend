@@ -16,9 +16,9 @@ export const Menu: React.FC<IMenu> = (props) => {
     <Modal isOpen={props.open}>
       <div
         onClick={props.close}
-        className="flex items-start justify-end absolute  top-0 w-screen h-screen  bg-primary100/50 backdrop-blur-0 "
+        className={`flex items-start justify-end absolute  top-0 w-screen h-screen  `}
       >
-        <aside onClick={(e) => e.stopPropagation()}  className="flex flex-col items-center py-1 justify-around ml-auto mr-20 mt-16 w-40 h-28  rounded  bg-primary200">
+        <aside onClick={(e) => e.stopPropagation()}  className={`flex flex-col items-center py-1 justify-around ml-auto mr-20 mt-16 w-40 h-28  rounded  bg-primary200 ${props.open ? " animate-fadeInDown": "animate-fadeOutUp " }`}>
           <div className="w-4/5 flex flex-col items-start ">
             <h1 className="text-left h-auto text-base text-white  font-medium">{props.name}</h1>
             <h2 className="text-left text-xs h-auto mt-1 font-light text-white  ">{props.position}</h2>
