@@ -3,10 +3,11 @@ import { useState } from "react";
 import { Button } from "../components/button";
 import Filter from "../components/dropdown/filter";
 import { Download } from "../template/download";
-
+import { Upload } from "../template/upload";
 export default function Home() {
   const [filter, setFilter] = useState(false);
   const [download, setDownload] = useState(false);
+  const [upload, setUpload] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<string[]>(["KU"]);
   const data = ["KU", "KA", "KL", "KD"];
 
@@ -24,7 +25,7 @@ export default function Home() {
           <Button
             loading={false}
             disabled={false}
-            onClick={() => console.log("wd")}
+            onClick={() => setUpload(!upload)}
             className="bg-primary200 font-medium text-lg  rounded text-center w-32 h-10 "
             title="Atualizar"
           />
@@ -53,6 +54,10 @@ export default function Home() {
           close={() => setDownload(!download)}
           open={download}
           
+          />
+          <Upload
+          close={() => setUpload(!upload)}
+          open={upload}
           />
         </div>
       </nav>
