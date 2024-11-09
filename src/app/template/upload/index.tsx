@@ -1,8 +1,10 @@
 "use client";
 import * as I from "lucide-react";
 import Modal from "@/app/components/modal";
-import { useState } from "react";
-import { Button } from "@/app/components/button";
+import { FileInput } from "@/app/components/fileinput";
+import AxiosMockAdapter from "axios-mock-adapter";
+import axios from "axios";
+import {useState} from "react"
 
 interface IUpload {
   open: boolean;
@@ -10,8 +12,46 @@ interface IUpload {
 }
 
 export const Upload: React.FC<IUpload> = (props) => {
-  const [loading, setLoading] = useState(false);
+  const [progress ,setProgress] = useState(0)
+  const mock = new AxiosMockAdapter(axios);
 
+
+  mock.onPost("/api/fake-endpoint").reply((config) => {
+    const fileSize = 1024 * 1024; // Simulate a 1MB file size
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve([
+          200,
+          {
+            'Content-Length': fileSize,
+            'Content-Type': 'application/json',
+          },
+          { message: "Requisição bem-sucedida!", data: "Simulated Data" }
+        ]);
+      }, 2000);
+    });
+  });
+
+  const SendFile = async (file: any) => {
+    try {
+      const res = await axios.post("/api/fake-endpoint", file, {
+        onUploadProgress: (progressEvent) => {
+          const { loaded, total } = progressEvent;
+          if (total === undefined) {
+            console.log('ksd')
+            return 0; 
+          }
+          const percentCompleted = Math.round((loaded * 100) / total);
+          setProgress(percentCompleted);
+          console.log(`Progresso: ${percentCompleted}%`);
+        }
+      });
+      console.log(res)
+
+    } catch (error) {
+      console.error("Erro:", error);
+    }
+  };
   return (
     <Modal isOpen={props.open}>
       <div
@@ -26,7 +66,7 @@ export const Upload: React.FC<IUpload> = (props) => {
             props.open ? " animate-fadeInDown" : "animate-fadeOutUp "
           }`}
         >
-          <div className="w-4/5 flex flex-col items-start mb-auto  mt-10">
+          <div className="w-4/5 flex flex-col items-start py-5">
             <aside className="flex w-full flex-row items-center justify-between">
               <h1 className="text-left h-auto text-3xl w-auto text-white  font-regular">
                 Atualizar Tabela
@@ -38,24 +78,13 @@ export const Upload: React.FC<IUpload> = (props) => {
                 <I.X width="30px" height="30px" color="rgb(212, 212, 212)" />
               </div>
             </aside>
-            <h2 className="text-left text-base h-auto mt-3 font-normal text-white  ">
+            <h2 className="text-left text-base h-auto mt-2 font-normal text-white  ">
               Selecione um arquivo em Excel, com base no modelo da Legal Control
             </h2>
           </div>
-
-          <div className=" flex flex-col items-center justify-center w-4/5 h-2/5 bg-primary400/30 border border-solid border-blue200/20 rounded cursor-pointer">
-            <I.Image width="60px" height="60px" color="rgb(212, 212, 212)" />
-            <h3 className="text-sm font-normal text-white select-none ">solte seus arquivos ou clique aqui</h3>
-            <p className="text-xs font-normal text-gray300  select-none">formatos suportados:  xlsx, xls e xlsm</p>
-          </div>
-
-          <Button
-            loading={loading}
-            disabled={loading}
-            onClick={() => setLoading(!loading)}
-            className=" bg-blue270 h-10 font-medium text-sm mt-auto mb-10 w-1/2   " 
-            title={loading ? "" : "Finalizar"}
-          />
+          <form className="w-4/5 h-3/5">
+            <FileInput FileSelect={() => SendFile(File)}  progress={progress}/>
+          </form>
         </aside>
       </div>
     </Modal>
