@@ -30,7 +30,7 @@ export const Download: React.FC<IDownload> = (props) => {
         >
           <div className="w-4/5 flex flex-col items-start mb-auto  mt-10">
             <aside className="flex w-full flex-row items-center justify-between">
-              <h1 className="text-left h-auto text-4xl w-auto text-white  font-regular">
+              <h1 className="text-left h-auto text-3xl w-auto text-white  font-regular">
                 Baixar Tabela
               </h1>
               <div
@@ -40,7 +40,7 @@ export const Download: React.FC<IDownload> = (props) => {
                 <I.X width="30px" height="30px" color="rgb(212, 212, 212)" />
               </div>
             </aside>
-            <h2 className="text-left text-xl h-auto mt-3 font-normal text-white  ">
+            <h2 className="text-left  text-base h-auto mt-3 font-normal text-white  ">
               Selecione o periodo que deseja baixar
             </h2>
           </div>
