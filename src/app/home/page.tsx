@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { Button } from "../components/button";
 import Filter from "../components/dropdown/filter";
-import { Download } from "../template/download";
-import { Upload } from "../template/upload";
+import dynamic from "next/dynamic";
+
 export default function Home() {
   const [filter, setFilter] = useState(false);
   const [download, setDownload] = useState(false);
@@ -14,6 +14,18 @@ export default function Home() {
   const handleSelect = (selected: string[]) => {
     setSelectedOptions(selected);
   };
+  const Upload = dynamic(
+    () => import("../template/upload"),
+    {
+      loading: () => null,
+    }
+  );
+  const Download = dynamic(
+    () => import("../template/download"),
+    {
+      loading: () => null,
+    }
+  );
 
   return (
     <div className="flex-col  w-full h-screen-minus-80 items-start bg-primary100 justify-items-center  ">
@@ -50,6 +62,8 @@ export default function Home() {
             selectedOptions={selectedOptions}
             onSelect={handleSelect}
           />
+        </div>
+      </nav>
           <Download
           close={() => setDownload(!download)}
           open={download}
@@ -59,8 +73,6 @@ export default function Home() {
           close={() => setUpload(!upload)}
           open={upload}
           />
-        </div>
-      </nav>
     </div>
   );
 }
