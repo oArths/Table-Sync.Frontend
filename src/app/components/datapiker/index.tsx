@@ -14,7 +14,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-export function DatePickerWithRange({
+export default function DatePickerWithRange({
   className,
   onDateChange, 
 }: React.HTMLAttributes<HTMLDivElement> & {

@@ -1,32 +1,32 @@
 "use client";
+import axios from "axios";
+import { useState } from "react";
 import * as I from "lucide-react";
 import Modal from "@/app/components/modal";
-import { FileInput } from "@/app/components/fileinput";
 import AxiosMockAdapter from "axios-mock-adapter";
-import axios from "axios";
-import {useState} from "react"
+import FileInput from "../../components/fileinput";
 
 interface IUpload {
   open: boolean;
   close: () => void;
 }
 
-export const Upload: React.FC<IUpload> = (props) => {
-  const [progress ,setProgress] = useState(0)
+const Upload: React.FC<IUpload> = (props) => {
+  const [progress, setProgress] = useState(0);
   const mock = new AxiosMockAdapter(axios);
 
 
   mock.onPost("/api/fake-endpoint").reply((config) => {
-    const fileSize = 1024 * 1024; // Simulate a 1MB file size
+    const fileSize = 1024 * 1024;
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve([
           200,
           {
-            'Content-Length': fileSize,
-            'Content-Type': 'application/json',
+            "Content-Length": fileSize,
+            "Content-Type": "application/json",
           },
-          { message: "Requisição bem-sucedida!", data: "Simulated Data" }
+          { message: "Requisição bem-sucedida!", data: "Simulated Data" },
         ]);
       }, 2000);
     });
@@ -38,16 +38,15 @@ export const Upload: React.FC<IUpload> = (props) => {
         onUploadProgress: (progressEvent) => {
           const { loaded, total } = progressEvent;
           if (total === undefined) {
-            console.log('ksd')
-            return 0; 
+            console.log("ksd");
+            return 0;
           }
           const percentCompleted = Math.round((loaded * 100) / total);
           setProgress(percentCompleted);
           console.log(`Progresso: ${percentCompleted}%`);
-        }
+        },
       });
-      console.log(res)
-
+      console.log(res);
     } catch (error) {
       console.error("Erro:", error);
     }
@@ -83,10 +82,11 @@ export const Upload: React.FC<IUpload> = (props) => {
             </h2>
           </div>
           <form className="w-4/5 h-3/5">
-            <FileInput FileSelect={() => SendFile(File)}  progress={progress}/>
+            <FileInput FileSelect={() => SendFile(File)} progress={progress} />
           </form>
         </aside>
       </div>
     </Modal>
   );
 };
+export default Upload;

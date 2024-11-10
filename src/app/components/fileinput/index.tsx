@@ -21,7 +21,7 @@ interface IFileInput{
     FileSelect: (file: File) => void
     progress: number
 }
-export const FileInput: React.FC<IFileInput> = ({FileSelect, progress}) => {
+ const FileInput: React.FC<IFileInput> = ({FileSelect, progress}) => {
   const [file, setFile] = useState<File | null>(null);
 
   const removeFile = useCallback(() => {
@@ -135,3 +135,4 @@ const HasFile = ({ file, removeFile , sendFile, progress}: HasFileProps) => {
     </div>
   );
 };
+export default FileInput;

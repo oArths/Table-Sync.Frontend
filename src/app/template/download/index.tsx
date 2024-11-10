@@ -3,30 +3,34 @@ import * as I from "lucide-react";
 import Modal from "@/app/components/modal";
 import { useState } from "react";
 import { Button } from "@/app/components/button";
-import { DatePickerWithRange } from "../../components/datapiker/datepiker";
 import { DateRange } from "react-day-picker";
-
+import DatePickerWithRange from "../../components/datapiker";
 
 interface IDownload {
   open: boolean;
   close: () => void;
 }
 
-export const Download: React.FC<IDownload> = (props) => {
+const Download: React.FC<IDownload> = (props) => {
   const [loading, setLoading] = useState(false);
   const handleDateChange = (date: DateRange | undefined) => {
     console.log("Data selecionada:", date);
   };
+ 
 
   return (
     <Modal isOpen={props.open}>
       <div
         onClick={props.close}
-        className={`flex items-center justify-center absolute  top-0 w-screen h-screen ${props.open ? " animate-colorOutUp": "animate-colorInDown" }`}
+        className={`flex items-center justify-center absolute  top-0 w-screen h-screen ${
+          props.open ? " animate-colorOutUp" : "animate-colorInDown"
+        }`}
       >
         <aside
           onClick={(e) => e.stopPropagation()}
-          className={`flex flex-col items-center justify-start  w-2/6 h-3/6  rounded  bg-primary100  border border-solid border-black400 ${props.open ? " animate-fadeInDown": "animate-fadeOutUp " }`}
+          className={`flex flex-col items-center justify-start  w-2/6 h-3/6  rounded  bg-primary100  border border-solid border-black400 ${
+            props.open ? " animate-fadeInDown" : "animate-fadeOutUp "
+          }`}
         >
           <div className="w-4/5 flex flex-col items-start mb-auto  mt-10">
             <aside className="flex w-full flex-row items-center justify-between">
@@ -45,8 +49,8 @@ export const Download: React.FC<IDownload> = (props) => {
             </h2>
           </div>
           <DatePickerWithRange
-          className=" w-4/5 "
-          onDateChange={handleDateChange}
+            className=" w-4/5 "
+            onDateChange={handleDateChange}
           />
 
           <Button
@@ -61,3 +65,4 @@ export const Download: React.FC<IDownload> = (props) => {
     </Modal>
   );
 };
+export default Download;
