@@ -5,11 +5,11 @@ import { IPagination } from "./table.d";
 
 const Table = ({ data }: Data) => {
   const [offset, setOffSet] = useState(0);
-  const limit = 8;
+  const limit = 5;
 
   return (
-    <>
-      <table className="w-11/12 h-auto mt-20 table-fixed overflow-hidden rounded-t-md  ">
+    <div className="flex flex-col items-start  justify-between w-11/12 min-h-96 h-auto mt-20 bg-primary200  overflow-hidden rounded-md">
+      <table className="w-full h-auto  table-fixed  ">
         <thead className="w-full ">
           <tr className="h-10 w-full  bg-primary200 border border-solid border-primary300  ">
             <th
@@ -56,14 +56,14 @@ const Table = ({ data }: Data) => {
             </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody  >
           {data.length < 1 && (
             <tr className="w-full h-80 bg-primary200 border border-solid border-primary300 cursor-pointer">
               <td
                 colSpan={7}
-                className="w-full h-full text-white font-medium text-base text-center bg-primary200"
+                className="w-full h-full text-gray500 font-light text-base text-center bg-primary200"
               >
-                Sem Nenhuma informação...
+               sem nenhuma informação...
               </td>
             </tr>
           )}
@@ -99,7 +99,7 @@ const Table = ({ data }: Data) => {
                   className="h-14 w-full bg-primary200 border border-solid border-primary300 cursor-pointer "
                 >
                   <th
-                    className="text-white font-normal text-base text-center truncate px-4 "
+                    className="text-white font-normal text-base text-center truncate px-4  "
                     scope="row"
                   >
                     {Item.Processo["Número do Processo"]}
@@ -111,7 +111,7 @@ const Table = ({ data }: Data) => {
                     {Item.Cliente.Status}
                   </td>
                   <td className="text-white font-normal text-sm text-center truncate px-4">
-                    {Item.Cliente.Locatatio}
+                    {Item.Cliente.Locatario}
                   </td>
                   <td className="text-white font-normal text-sm text-center truncate px-4 ">
                     {dateStyle(Item.Processo["Última movimentação"])}
@@ -133,7 +133,7 @@ const Table = ({ data }: Data) => {
         setOffset={setOffSet}
         total={data.length}
       />
-    </>
+    </div>
   );
 };
 export default Table;
@@ -149,7 +149,7 @@ const Pagination = ({ limit, total, offset, setOffset }: IPagination) => {
     start = Math.max(end - max_items + 1, 1);
   }
   return (
-    <div className=" h-16 w-11/12 flex flex-row items-center justify-between bg-primary200 border border-solid border-x-primary300  border-b-primary300  border-t-0 px-7 ">
+    <div className=" h-16 w-full flex flex-row items-center justify-between bg-primary200 border border-solid border-primary300  px-7 ">
       <Button
         title="Anterior"
         loading={false}
