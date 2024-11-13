@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/app/components/button";
 import { Data } from "@/app/data/response.d";
 import { useState } from "react";

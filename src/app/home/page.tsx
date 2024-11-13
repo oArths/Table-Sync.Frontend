@@ -1,3 +1,4 @@
+"use client"
 import dynamic from "next/dynamic";
 import Table from "../template/table";
 import { Button } from "../components/button";
