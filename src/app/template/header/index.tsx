@@ -9,7 +9,7 @@ export const Header = () => {
   let path = usePathname();
   if (path === "/home") {
     return (
-      <header className="flex items-center justify-center w-full h-16   bg-primary100 border border-solid  border-b-gray100/50  ">
+      <header className="flex items-center justify-center w-full h-20 py-3 bg-primary100 border border-solid  border-b-gray100/50  ">
         <div className="w-11/12  h-full flex flex-row items-center justify-between ">
           <div className=" w-[100px] h-[30px]">
             <SuspenseImage
