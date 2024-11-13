@@ -1,58 +1,25 @@
-"use client";
-import { useState } from "react";
-import { Button } from "../components/button";
-import Filter from "../components/dropdown/filter";
 import dynamic from "next/dynamic";
 import Table from "../template/table";
-import response from "../data/response.json";
+import { Button } from "../components/button";
+import Filter from "../components/dropdown/filter";
+import useLogic from "./logic";
 import { Options } from "./data";
 
 export default function Home() {
-  const [filter, setFilter] = useState(false);
-  const [download, setDownload] = useState(false);
-  const [upload, setUpload] = useState(false);
-  const [selectedOptions, setSelectedOptions] = useState<string[]>(Options);
-  const [filteredData, setFilteredData] = useState(response);
-  const [searchValue, setSearchValue] = useState("");
-
-
-  
-
-  const normalizeString = (str: string) => {
-    return str
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, ""); 
-  };
-
-  const handleSelect = (selected: string[], searchValueParam?: string) => {
-    setSelectedOptions(selected);
-  
-    const searchValueToUse = searchValueParam !== undefined ? searchValueParam : searchValue;
-    const searchNormalize = normalizeString(searchValueToUse);
-  
-    const filteredByOptions = response.filter((item) =>
-      selected.includes(item.Cliente.Status)
-    );
-  
-    const filteredBySearch = filteredByOptions.filter((item) => {
-      const dataToSearch = [
-        item.Processo["Número do Processo"],
-        item.Cliente["Número do Cliente"],
-        item.Cliente.Status,
-        item.Cliente.Locatario,
-        item.Processo["Última movimentação"],
-        item.Contratos["Fim do contrato"],
-        item.Processuais.Fase,
-        item.Cliente.CNPJ,
-      ].join(" ");
-  
-      return normalizeString(dataToSearch).includes(searchNormalize);
-    });
-  
-    setFilteredData(filteredBySearch);
-  };
-  
+  const {
+    filter,
+    setFilter,
+    download,
+    setDownload,
+    upload,
+    setUpload,
+    selectedOptions,
+    searchValue,
+    setSearchValue,
+    handleSelect,
+    filteredData,
+    menu,
+  } = useLogic();
 
   const Upload = dynamic(() => import("../template/upload"), {
     loading: () => null,
@@ -64,7 +31,7 @@ export default function Home() {
   return (
     <div
       className={`flex-col  w-full h-screen-minus-80   pb-20 items-start bg-primary100 justify-items-center  transition-all delay-200 ${
-        (download || upload) && "overflow-y-hidden"
+        (download || upload || menu) && "overflow-y-hidden"
       }`}
     >
       <h1 className="w-11/12 mt-11 text-white text-5xl text-left font-medium">
