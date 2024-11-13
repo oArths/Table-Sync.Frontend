@@ -5,18 +5,18 @@ import { CalendarIcon } from "lucide-react";
 import { DateRange } from "react-day-picker";
 import { ptBR } from "date-fns/locale";
 
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+import { cn } from "@/radix/lib/utils";
+import { Button } from "@/radix/components/ui/button";
+import { Calendar } from "@/radix/components/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "@/radix/components/ui/popover";
 
 export default function DatePickerWithRange({
   className,
-  onDateChange, 
+  onDateChange,
 }: React.HTMLAttributes<HTMLDivElement> & {
   onDateChange?: (date: DateRange | undefined) => void;
 }) {
@@ -25,11 +25,10 @@ export default function DatePickerWithRange({
     to: addDays(new Date(2024, 0, 20), 20),
   });
 
-  
   const handleDateChange = (newDate: DateRange | undefined) => {
     setDate(newDate);
     if (onDateChange) {
-      onDateChange(newDate); 
+      onDateChange(newDate);
     }
   };
 
@@ -49,7 +48,8 @@ export default function DatePickerWithRange({
             {date?.from ? (
               date.to ? (
                 <>
-                  {format(date.from, "LLL dd, y")} - {format(date.to, "LLL dd, y")}
+                  {format(date.from, "LLL dd, y")} -{" "}
+                  {format(date.to, "LLL dd, y")}
                 </>
               ) : (
                 format(date.from, "LLL dd, y")
@@ -59,7 +59,11 @@ export default function DatePickerWithRange({
             )}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="ml-10 w-auto p-0 dark" align="center" side="right">
+        <PopoverContent
+          className="ml-10 w-auto p-0 dark"
+          align="center"
+          side="right"
+        >
           <Calendar
             locale={ptBR}
             initialFocus

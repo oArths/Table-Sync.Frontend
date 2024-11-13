@@ -1,5 +1,5 @@
 import SuspenseImage from "./shared/suspenseImage";
-import Form from "./form";
+import Form from "./template/form";
 export default function Login() {
   return (
     <main className="w-full h-screen bg-primary100 flex items-center justify-center">
