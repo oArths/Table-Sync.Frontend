@@ -3,10 +3,16 @@ import SuspenseImage from "@/app/shared/suspenseImage";
 import { usePathname } from "next/navigation";
 import { Menu } from "../menu";
 import { useState } from "react";
-
 export const Header = () => {
-  const [menu, setMenu] = useState(false);
   let path = usePathname();
+  const [menu ,setMenu] =  useState(false) 
+
+
+  const localStore = (menu: boolean) => {
+    let string = menu === true ? "true" : "false"
+    localStorage.setItem("menu", string);
+    setMenu(!menu)
+  };
   if (path === "/home") {
     return (
       <header className="flex items-center justify-center w-full h-20 py-3 bg-primary100 border border-solid  border-b-gray100/50  ">
@@ -21,7 +27,7 @@ export const Header = () => {
             />
           </div>
           <div
-            onClick={() => setMenu(!menu)}
+            onClick={() => localStore(menu)}
             className="cursor-pointer flex items-center justify-center rounded-full border border-solid border-primary200  h-11 w-11 bg-primary100"
           >
             <SuspenseImage
@@ -37,7 +43,7 @@ export const Header = () => {
         <Menu
           name="Janaina Mendes"
           position="Grenke"
-          close={() => setMenu(false)}
+          close={() => localStore(menu)}
           open={menu}
         />
       </header>

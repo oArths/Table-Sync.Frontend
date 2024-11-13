@@ -15,6 +15,9 @@ export default function Home() {
   const [filteredData, setFilteredData] = useState(response);
   const [searchValue, setSearchValue] = useState("");
 
+
+  
+
   const normalizeString = (str: string) => {
     return str
       .toLowerCase()
