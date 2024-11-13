@@ -29,7 +29,7 @@ export default function Filter({
     <div className="relative  w-32 h-10  ">
       <p
         onClick={onClick}
-        className="cursor-pointer select-none font-medium text-base text-gray500 px-4 flex flex-row items-center justify-between w-full h-full bg-primary200 rounded"
+        className={`cursor-pointer select-none font-medium text-base text-gray500 px-4 flex flex-row items-center justify-between w-full h-full bg-primary200 rounded`}
       >
         Status
         <I.ChevronDown
@@ -43,7 +43,7 @@ export default function Filter({
       </p>
       {open && (
         <div
-          className={`absolute flex flex-col items-center justify-center py-1 z-10 w-32 mt-1 bg-primary200 rounded ${
+          className={`absolute flex flex-col items-center justify-center py-1 z-10 w-32 mt-1 bg-primary300 rounded ${
             open ? "animate-fadeInDown" : "animate-fadeOutUp"
           }`}
         >
@@ -53,7 +53,7 @@ export default function Filter({
               <p
                 key={index}
                 onClick={() => handleOptionClick(value)}
-                className="flex flex-row items-center px-1 font-regular text-base text-gray500 justify-between w-5/6 rounded-sm hover:bg-primary400 cursor-pointer select-none"
+                className="flex flex-row items-center px-1 font-regular text-base text-gray500 justify-between w-11/12 rounded-sm hover:bg-primary400 cursor-pointer select-none"
               >
                 {value}
                 {isSelected && (
