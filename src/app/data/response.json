@@ -1,0 +1,600 @@
+[
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KL",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/11/2024",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KU",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/11/2024",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KD",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "19/09/2024",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KD",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/05/2023",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KU",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/05/2023",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KL",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/05/2023",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KL",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/05/2023",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KL",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/05/2023",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KL",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/05/2023",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KL",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/05/2024",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KL",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/05/2023",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KL",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/05/2023",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  },
+  {
+    "Cliente": {
+      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "CNPJ": "42.547.874/0001-69",
+      "Número do Cliente": 65588,
+      "Status": "KL",
+      "Inclusão na Legal Control": "10/02/2004",
+      "Data KA": "17/10/1900"
+    },
+    "Contratos": {
+      "Fornecedor": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
+      "Valor inadimplido": "R$ 4.500,00",
+      "Fo": "MDA",
+      "Fim do contrato": "15/08/2027"
+
+    },
+    "Custas e Valores": {
+      "Valor das custas iniciais": "R$ 12.500,00",
+      "Valor inicial do cumprimento": "R$ 268.526,00",
+      "Valor histórico/Sentença": "R$ 12.500,00",
+      "Valor de outras custas": "R$ 9.500,00",
+      "Custas pagas GC": "R$ 9.500,00"
+     
+    },
+    "Processuais": {
+      "Recuperação judicial": "Não",
+      "Sentença": {
+        "Sentença" : "sim",
+        "Tipo de Sentença": "Procedente",
+        "Situação Processual": "Ativo"
+      },
+      "Valor recebido (pago à Grenke)": "R$ 9.500,00",
+      "Valor pago pela Grenke": "R$ 9.500,00",
+      "Fase": "Cumprimento da Sentença",
+      "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    },
+    "Processo": {
+      "Número do Processo": "0012857-36.2021.8.26.0554",
+      "Novo número de processo": "141.585.745-9",
+      "Acordo Realizado": "Não",
+      "Valor da Causa": "R$ 9.500,00",
+      "Última movimentação": "10/05/2023",
+      "Citação": "Sim",
+      "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
+    }
+  }
+  ]
