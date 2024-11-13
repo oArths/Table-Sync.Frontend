@@ -4,9 +4,8 @@ import { Button } from "../components/button";
 import Filter from "../components/dropdown/filter";
 import dynamic from "next/dynamic";
 import Table from "../template/table";
-import response from "../data/response.json"
+import response from "../data/response.json";
 import { Options } from "./data";
-import {Data} from "../data/response.d"
 
 export default function Home() {
   const [filter, setFilter] = useState(false);
@@ -14,17 +13,44 @@ export default function Home() {
   const [upload, setUpload] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<string[]>(Options);
   const [filteredData, setFilteredData] = useState(response);
+  const [searchValue, setSearchValue] = useState("");
 
-
-  const handleSelect = (selected: string[]) => {
-    setSelectedOptions(selected);
-
-    const Filtered = response.filter((item) => 
-      selected.includes(item.Cliente.Status) 
-    );
-    setFilteredData(Filtered);
-
+  const normalizeString = (str: string) => {
+    return str
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, ""); 
   };
+
+  const handleSelect = (selected: string[], searchValueParam?: string) => {
+    setSelectedOptions(selected);
+  
+    const searchValueToUse = searchValueParam !== undefined ? searchValueParam : searchValue;
+    const searchNormalize = normalizeString(searchValueToUse);
+  
+    const filteredByOptions = response.filter((item) =>
+      selected.includes(item.Cliente.Status)
+    );
+  
+    const filteredBySearch = filteredByOptions.filter((item) => {
+      const dataToSearch = [
+        item.Processo["Número do Processo"],
+        item.Cliente["Número do Cliente"],
+        item.Cliente.Status,
+        item.Cliente.Locatario,
+        item.Processo["Última movimentação"],
+        item.Contratos["Fim do contrato"],
+        item.Processuais.Fase,
+        item.Cliente.CNPJ,
+      ].join(" ");
+  
+      return normalizeString(dataToSearch).includes(searchNormalize);
+    });
+  
+    setFilteredData(filteredBySearch);
+  };
+  
+
   const Upload = dynamic(() => import("../template/upload"), {
     loading: () => null,
   });
@@ -35,7 +61,7 @@ export default function Home() {
   return (
     <div
       className={`flex-col  w-full h-screen-minus-80   pb-20 items-start bg-primary100 justify-items-center  transition-all delay-200 ${
-       ( download || upload) && "overflow-y-hidden"
+        (download || upload) && "overflow-y-hidden"
       }`}
     >
       <h1 className="w-11/12 mt-11 text-white text-5xl text-left font-medium">
@@ -62,6 +88,12 @@ export default function Home() {
             type="text"
             autoComplete="off"
             placeholder="Pesquisar..."
+            value={searchValue}
+            onChange={(e) => {
+              const newSearchValue = e.target.value;
+              setSearchValue(newSearchValue);
+              handleSelect(selectedOptions, newSearchValue);
+            }}
             className="w-80  py-2 px-3 h-10 rounded  mr-12  text-white border border-solid  border-primary200  focus:ease-in  focus:border-blue200 bg-primary100 transition-colors duration-300 focus:outline-none"
           />
           <Filter
