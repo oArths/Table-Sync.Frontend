@@ -1,7 +1,7 @@
 [
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KL",
@@ -13,7 +13,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -21,18 +20,17 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
       "Valor recebido (pago à Grenke)": "R$ 9.500,00",
       "Valor pago pela Grenke": "R$ 9.500,00",
-      "Fase": "Cumprimento da Sentença",
+      "Fase": "a",
       "Contato FR": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
     "Processo": {
@@ -47,7 +45,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KU",
@@ -59,7 +57,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -67,12 +64,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -93,7 +89,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "Arhir7",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KD",
@@ -105,7 +101,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -113,12 +108,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -139,7 +133,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "pega",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KD",
@@ -151,7 +145,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -159,12 +152,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -185,7 +177,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KU",
@@ -197,7 +189,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -205,12 +196,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -231,7 +221,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KL",
@@ -243,7 +233,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -251,12 +240,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -277,7 +265,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KL",
@@ -289,7 +277,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -297,12 +284,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -323,7 +309,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KL",
@@ -335,7 +321,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -343,12 +328,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -369,7 +353,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KL",
@@ -381,7 +365,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -389,12 +372,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -415,7 +397,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KL",
@@ -427,7 +409,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -435,12 +416,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -461,7 +441,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KL",
@@ -473,7 +453,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -481,12 +460,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -507,7 +485,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KL",
@@ -519,7 +497,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -527,12 +504,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -553,7 +529,7 @@
   },
   {
     "Cliente": {
-      "Locatatio": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
       "Número do Cliente": 65588,
       "Status": "KL",
@@ -565,7 +541,6 @@
       "Valor inadimplido": "R$ 4.500,00",
       "Fo": "MDA",
       "Fim do contrato": "15/08/2027"
-
     },
     "Custas e Valores": {
       "Valor das custas iniciais": "R$ 12.500,00",
@@ -573,12 +548,11 @@
       "Valor histórico/Sentença": "R$ 12.500,00",
       "Valor de outras custas": "R$ 9.500,00",
       "Custas pagas GC": "R$ 9.500,00"
-     
     },
     "Processuais": {
       "Recuperação judicial": "Não",
       "Sentença": {
-        "Sentença" : "sim",
+        "Sentença": "sim",
         "Tipo de Sentença": "Procedente",
         "Situação Processual": "Ativo"
       },
@@ -597,4 +571,4 @@
       "FR Último Andamento/Providências": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     }
   }
-  ]
+]

@@ -11,7 +11,7 @@ export interface Root {
   }
   
   export interface Cliente {
-    Locatatio: string
+    Locatario: string
     CNPJ: string
     "Número do Cliente": number
     Status: string
