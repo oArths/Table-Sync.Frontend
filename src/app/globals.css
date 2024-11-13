@@ -22,7 +22,7 @@ img {
   -webkit-user-drag: none;
 }
 .h-screen-minus-80 {
-  height: calc(100vh - 4rem);
+  height: auto;
 }
 
 input:-webkit-autofill {
