@@ -22,7 +22,7 @@ const Download: React.FC<IDownload> = (props) => {
     <Modal isOpen={props.open}>
       <div
         onClick={props.close}
-        className={`flex items-center justify-center absolute  top-0 w-screen h-screen ${
+        className={`flex items-center justify-center fixed  top-0 w-full h-full ${
           props.open ? " animate-colorOutUp" : "animate-colorInDown"
         }`}
       >
