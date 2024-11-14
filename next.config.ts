@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'date-fns'],
+  },
 };
+// const withBundleAnalyzer = require('@next/bundle-analyzer')({
+//   enabled: true,
+//   openAnalyzer: true
+// })
+ 
+// module.exports = withBundleAnalyzer(nextConfig)
 
 export default nextConfig;
