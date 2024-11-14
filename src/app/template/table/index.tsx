@@ -2,7 +2,7 @@
 import { Button } from "@/app/components/button";
 import { Data } from "@/app/data/response.d";
 import { useState } from "react";
-import { IPagination } from "./table.d";
+import { IPagination } from "./types.d";
 
 const Table = ({ data }: Data) => {
   const [offset, setOffSet] = useState(0);
@@ -156,7 +156,7 @@ const Pagination = ({ limit, total, offset, setOffset }: IPagination) => {
         loading={false}
         onClick={() => setOffset(Math.max(offset - limit, 0))}
         disabled={current === 1}
-        className="w-36 h-7 bg-primary200 border border-solid border-primary300 text-sm font-normal"
+        className="w-36 h-7 bg-primary200 border border-solid border-primary300 text-sm font-normal disabled:cursor-not-allowed disabled:opacity-50"
       />
       <span className=" text-white font-normal text-base text-center select-none">
         {current} de {pages}
@@ -166,7 +166,7 @@ const Pagination = ({ limit, total, offset, setOffset }: IPagination) => {
         loading={false}
         onClick={() => setOffset(Math.min(offset + limit, (pages - 1) * limit))}
         disabled={current === pages}
-        className="w-36 h-7 bg-primary200 border border-solid border-primary300 text-sm font-normal "
+        className="w-36 h-7 bg-primary200 border border-solid border-primary300 text-sm font-normal disabled:cursor-not-allowed disabled:opacity-50 "
       />
     </div>
   );
