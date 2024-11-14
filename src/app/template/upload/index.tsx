@@ -3,7 +3,6 @@ import axios from "axios";
 import { useState } from "react";
 import * as I from "lucide-react";
 import Modal from "@/app/components/modal";
-import AxiosMockAdapter from "axios-mock-adapter";
 import FileInput from "../../components/fileinput";
 
 interface IUpload {
@@ -13,32 +12,18 @@ interface IUpload {
 
 const Upload: React.FC<IUpload> = (props) => {
   const [progress, setProgress] = useState(0);
-  const mock = new AxiosMockAdapter(axios);
-
-
-  mock.onPost("/api/fake-endpoint").reply((config) => {
-    const fileSize = 1024 * 1024;
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve([
-          200,
-          {
-            "Content-Length": fileSize,
-            "Content-Type": "application/json",
-          },
-          { message: "Requisição bem-sucedida!", data: "Simulated Data" },
-        ]);
-      }, 2000);
-    });
-  });
+  const [file, setFile] = useState<File | null>(null);
 
   const SendFile = async (file: any) => {
+    console.log("send", file);
     try {
-      const res = await axios.post("/api/fake-endpoint", file, {
+      const formData = new FormData();
+      formData.append("file", file);
+
+      const res = await axios.post("/api/fake-endpoint", formData, {
         onUploadProgress: (progressEvent) => {
           const { loaded, total } = progressEvent;
           if (total === undefined) {
-            console.log("ksd");
             return 0;
           }
           const percentCompleted = Math.round((loaded * 100) / total);
@@ -51,10 +36,18 @@ const Upload: React.FC<IUpload> = (props) => {
       console.error("Erro:", error);
     }
   };
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    console.log(file);
+    if (file) {
+      e.preventDefault();
+      return;
+    }
+    props.close();
+  };
   return (
     <Modal isOpen={props.open}>
       <div
-        onClick={props.close}
+        onClick={(e) => handleClick(e)}
         className={`flex items-center justify-center fixed  top-0 w-full h-full ${
           props.open ? " animate-colorOutUp" : "animate-colorInDown"
         }`}
@@ -71,7 +64,7 @@ const Upload: React.FC<IUpload> = (props) => {
                 Atualizar Tabela
               </h1>
               <div
-                onClick={props.close}
+                onClick={(e) => handleClick(e)}
                 className="fle w-7 h-full cursor-pointer  "
               >
                 <I.X width="30px" height="30px" color="rgb(212, 212, 212)" />
@@ -82,7 +75,12 @@ const Upload: React.FC<IUpload> = (props) => {
             </h2>
           </div>
           <form className="w-4/5 h-3/5">
-            <FileInput FileSelect={() => SendFile(File)} progress={progress} />
+            <FileInput
+              FileSelect={(selectedFile: File | null) => (
+                setFile(selectedFile), SendFile(selectedFile)
+              )}
+              progress={progress}
+            />
           </form>
         </aside>
       </div>

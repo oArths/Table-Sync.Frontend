@@ -2,39 +2,23 @@
 import * as I from "lucide-react";
 import { useCallback, useState } from "react";
 import { Button } from "@/app/components/button";
-import { DropzoneState, useDropzone } from "react-dropzone";
+import { useDropzone } from "react-dropzone";
+import { IFileInput, HasFileProps, InputProps } from "./types.d";
 
-interface InputProps {
-  dropzone: DropzoneState;
-}
-
-interface HasFileProps {
-  file?: File;
-  removeFile: () => void;
-  sendFile : (file: File) => void ;
-  progress: number
-
-}
-
-
-interface IFileInput{
-    FileSelect: (file: File) => void
-    progress: number
-}
- const FileInput: React.FC<IFileInput> = ({FileSelect, progress}) => {
+const FileInput: React.FC<IFileInput> = ({ FileSelect, progress }) => {
   const [file, setFile] = useState<File | null>(null);
 
   const removeFile = useCallback(() => {
     setFile(null);
+    sendFile(null)
   }, [file]);
 
   const onDrop = useCallback((files: File[]) => {
     setFile(files[0]);
   }, []);
 
-  function sendFile (data: File){
-    FileSelect(data)
-
+  function sendFile(data: File | null) {
+    FileSelect(data);
   }
 
   const dropzone = useDropzone({
@@ -47,7 +31,16 @@ interface IFileInput{
     },
   });
 
-  if (file) return <HasFile file={file} removeFile={removeFile}  sendFile={() =>sendFile(file)} progress={progress}/>;
+  if (file) {
+    return (
+      <HasFile
+        file={file}
+        removeFile={removeFile}
+        sendFile={() => sendFile(file)}
+        progress={progress}
+      />
+    );
+  }
 
   return <Input dropzone={dropzone} />;
 };
@@ -70,7 +63,7 @@ const Input = ({ dropzone }: InputProps) => {
             }`}
           />
           {isDragActive ? (
-            <p className="font-bold text-lg text-blue-400">
+            <p className="text-sm font-normal text-gray500 select-none ">
               Solte para adicionar
             </p>
           ) : (
@@ -90,7 +83,7 @@ const Input = ({ dropzone }: InputProps) => {
   );
 };
 
-const HasFile = ({ file, removeFile , sendFile, progress}: HasFileProps) => {
+const HasFile = ({ file, removeFile, sendFile, progress }: HasFileProps) => {
   const [loading, setLoading] = useState(false);
   function formatFileSize(bytes: number | undefined) {
     if (bytes === 0 || bytes === undefined) return "0 Bytes";
@@ -104,30 +97,39 @@ const HasFile = ({ file, removeFile , sendFile, progress}: HasFileProps) => {
     <div className="w-full h-full  flex  flex-col justify-between items-center">
       <div className="bg-primary300 w-full rounded-md shadow-md flex flex-col mt-10  overflow-hidden">
         <div className="w-full flex flex-row items-center justify-start px-4 gap-3 ">
-        <p className="  flex items-center p-2 justify-center rounded bg-primary200">
-          <I.FileText className="text-gray500 w-5 h-5 " />
-        </p>
-        <span className="flex flex-col w-full my-4 ">
-          <p className="text-sm text-gray500 ">{file?.name}</p>
-        {progress ?  (<p className="text-xs text-gray500 ">{progress}</p>) :
-          (<p className="text-xs text-gray500 ">{formatFileSize(file?.size)}</p>)}
-        </span>
-        <button
-          type="button"
-          onClick={removeFile}
-          className="place-self-center ml-auto mr-4 p-1"
-        >
-          <I.XCircle className="w-5 h-5  " color="rgb(211, 47, 47)" />
-        </button>
+          <p className="  flex items-center p-2 justify-center rounded bg-primary200">
+            <I.FileText className="text-gray500 w-5 h-5 " />
+          </p>
+          <span className="flex flex-col w-full my-4 ">
+            <p className="text-sm text-gray500 ">{file?.name}</p>
+            {progress ? (
+              <p className="text-xs text-gray500 ">{progress}%</p>
+            ) : (
+              <p className="text-xs text-gray500 ">
+                {formatFileSize(file?.size)}
+              </p>
+            )}
+          </span>
+          <button
+            type="button"
+            onClick={removeFile}
+            className="place-self-center ml-auto mr-4 p-1"
+          >
+            <I.XCircle className="w-5 h-5  " color="rgb(211, 47, 47)" />
+          </button>
         </div>
-        <div className="h-2 bg-green200 animate-pulse" style={{width:`${loading ? "100%" : "0%"}`}}></div>
+        <div
+          className="h-2 bg-green200 animate-pulse"
+          style={{ width: `${loading ? "100%" : "0%"}` }}
+        ></div>
       </div>
       <Button
         loading={loading}
         disabled={loading}
         type="button"
         onClick={() => {
-            file && sendFile(file); setLoading(!loading)
+          file && sendFile(file);
+          setLoading(!loading);
         }}
         className=" bg-blue270 h-10 font-medium text-sm w-full"
         title={loading ? "" : "Enviar"}
