@@ -4,15 +4,14 @@ import { addDays, format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { DateRange } from "react-day-picker";
 import { ptBR } from "date-fns/locale";
-
-import { cn } from "@/radix/lib/utils";
-import { Button } from "@/radix/components/ui/button";
-import { Calendar } from "@/radix/components/ui/calendar";
+import { cn } from "../../radix/lib/utils";
+import { Button } from "../../radix/components/ui/button";
+import { Calendar } from "../../radix/components/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/radix/components/ui/popover";
+} from "@/app/radix/components/ui/popover";
 
 export default function DatePickerWithRange({
   className,
