@@ -20,7 +20,7 @@ export default function Filter(props: IFilter) {
     props.onSelect(newSelectedOptions);
   };
   return (
-    <div className="relative  w-32 h-10  ">
+    <div className="relative  w-32 h-10 cursor-pointer ">
       <p
         onClick={props.onClick}
         className={`cursor-pointer select-none font-medium text-base text-gray500 px-4 flex flex-row items-center justify-between w-full h-full bg-primary200 rounded`}

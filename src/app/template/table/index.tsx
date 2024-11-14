@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/app/components/button";
 import { Data } from "@/app/data/response.d";
 import { useState } from "react";
@@ -6,7 +6,7 @@ import { IPagination } from "./types.d";
 
 const Table = ({ data }: Data) => {
   const [offset, setOffSet] = useState(0);
-  const limit = 5;
+  const limit = 7;
 
   return (
     <div className="flex flex-col items-start  justify-between w-11/12 min-h-96 h-auto mt-20 bg-primary200  overflow-hidden rounded-md">
@@ -57,14 +57,14 @@ const Table = ({ data }: Data) => {
             </th>
           </tr>
         </thead>
-        <tbody  >
+        <tbody>
           {data.length < 1 && (
             <tr className="w-full h-80 bg-primary200 border border-solid border-primary300 cursor-pointer">
               <td
                 colSpan={7}
                 className="w-full h-full text-gray500 font-light text-base text-center bg-primary200"
               >
-               sem nenhuma informação...
+                sem nenhuma informação...
               </td>
             </tr>
           )}

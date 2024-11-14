@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body
         id="modal"
-        className={`${tajawal.variable} font-sans flex flex-col items-start h-dvh`}
+        className={`${tajawal.variable} font-sans flex flex-col items-start h-full bg-primary100 `}
       >
         <StoreProvider >
           <Header />
