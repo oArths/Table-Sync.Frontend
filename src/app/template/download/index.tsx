@@ -16,12 +16,18 @@ const Download: React.FC<IDownload> = (props) => {
   const handleDateChange = (date: DateRange | undefined) => {
     console.log("Data selecionada:", date);
   };
- 
-
+// fazer a modal se fechar ao iniciar o download
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (loading) {
+      e.preventDefault();
+      return;
+    }
+    props.close();
+  };
   return (
     <Modal isOpen={props.open}>
       <div
-        onClick={props.close}
+        onClick={(e) => handleClick(e)}
         className={`flex items-center justify-center fixed  top-0 w-full h-full ${
           props.open ? " animate-colorOutUp" : "animate-colorInDown"
         }`}
@@ -52,7 +58,6 @@ const Download: React.FC<IDownload> = (props) => {
             className=" w-4/5 "
             onDateChange={handleDateChange}
           />
-
           <Button
             loading={loading}
             disabled={loading}
