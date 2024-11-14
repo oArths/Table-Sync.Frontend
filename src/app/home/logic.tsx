@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/rootReducer";
@@ -15,13 +15,17 @@ const useLogic = () => {
   const menu = useSelector((state: RootState) => state.menu.open);
 
   const normalizeString = (str: string) => {
-    return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return str
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
   };
 
   const handleSelect = (selected: string[], searchValueParam?: string) => {
     setSelectedOptions(selected);
 
-    const searchValueToUse = searchValueParam !== undefined ? searchValueParam : searchValue;
+    const searchValueToUse =
+      searchValueParam !== undefined ? searchValueParam : searchValue;
     const searchNormalize = normalizeString(searchValueToUse);
 
     const filteredByOptions = response.filter((item) =>
