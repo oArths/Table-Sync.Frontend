@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "Cliente": {
       "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "id": 2,
+    "id": "2",
     "Cliente": {
       "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
@@ -90,7 +90,7 @@
     }
   },
   {
-    "id": 3,
+    "id": "3",
     "Cliente": {
       "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
@@ -135,7 +135,7 @@
     }
   },
   {
-    "id": 3,
+    "id": "4",
     "Cliente": {
       "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
@@ -180,7 +180,7 @@
     }
   },
   {
-    "id": 4,
+    "id": "5",
     "Cliente": {
       "Locatario": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
       "CNPJ": "42.547.874/0001-69",
@@ -225,7 +225,7 @@
     }
   },
   {
-    "id": 5,
+    "id": "6",
     "Cliente": {
       "Locatario": "TECHMAX SOLUÇÕES DIGITAIS",
       "CNPJ": "21.456.789/0001-99",
@@ -270,7 +270,7 @@
     }
   },
   {
-    "id": 6,
+    "id": "7",
     "Cliente": {
       "Locatario": "ALPHA TECNOLOGIA E SISTEMAS",
       "CNPJ": "33.123.456/0001-11",
@@ -315,7 +315,7 @@
     }
   },
   {
-    "id": 7,
+    "id": "8",
     "Cliente": {
       "Locatario": "OMEGA INOVAÇÕES TECNOLÓGICAS",
       "CNPJ": "55.789.123/0001-88",

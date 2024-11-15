@@ -1,61 +1,74 @@
-export interface Data {
-  data: Root[];
+export type Data = Root[];
+
+export type TableType = Table[];
+
+export interface Table {
+  id: string;
+  processNumber: string;
+  clientNumber: number;
+  status: string;
+  tenant: string;
+  lastMovement: string;
+  contractEnd: string;
+  phase: string;
+  cnpj: string;
 }
+export type RootObject = Root;
 
 export interface Root {
-  id: number;
-  Cliente: Cliente;
-  Contratos: Contratos;
-  "Custas e Valores": CustasEValores;
-  Processuais: Processuais;
-  Processo: Processo;
+  id: string;
+  client: Client;
+  contracts: Contracts;
+  costsAndValues: CostsAndValues;
+  procedural: Procedural;
+  process: Process;
 }
 
-export interface Cliente {
-  Locatario: string;
-  CNPJ: string;
-  "Número do Cliente": number;
-  Status: string;
-  "Inclusão na Legal Control": string;
-  "Data KA": string;
+export interface Client {
+  tenant: string;
+  cnpj: string;
+  clientNumber: number;
+  status: string;
+  inclusionInLegalControl: string;
+  kaDate: string;
 }
 
-export interface Contratos {
-  Fornecedor: string;
-  "Valor inadimplido": string;
-  Fo: string;
-  "Fim do contrato": string;
+export interface Contracts {
+  supplier: string;
+  overdueAmount: string;
+  fo: string;
+  contractEnd: string;
 }
 
-export interface CustasEValores {
-  "Valor das custas iniciais": string;
-  "Valor inicial do cumprimento": string;
-  "Valor histórico/Sentença": string;
-  "Valor de outras custas": string;
-  "Custas pagas GC": string;
+export interface CostsAndValues {
+  initialCourtCosts: string;
+  initialEnforcementAmount: string;
+  historicalAmountOrSentence: string;
+  otherCourtCosts: string;
+  gcPaidCosts: string;
 }
 
-export interface Processuais {
-  "Recuperação judicial": string;
-  Sentença: Sentena;
-  "Valor recebido (pago à Grenke)": string;
-  "Valor pago pela Grenke": string;
-  Fase: string;
-  "Contato FR": string;
+export interface Procedural {
+  judicialRecovery: string;
+  sentence: Sentence;
+  amountReceivedPaidToGrenke: string;
+  amountPaidByGrenke: string;
+  phase: string;
+  frContact: string;
 }
 
-export interface Sentena {
-  Sentença: string;
-  "Tipo de Sentença": string;
-  "Situação Processual": string;
+export interface Sentence {
+  sentence: string;
+  sentenceType: string;
+  proceduralSituation: string;
 }
 
-export interface Processo {
-  "Número do Processo": string;
-  "Novo número de processo": string;
-  "Acordo Realizado": string;
-  "Valor da Causa": string;
-  "Última movimentação": string;
-  Citação: string;
-  "FR Último Andamento/Providências": string;
+export interface Process {
+  processNumber: string;
+  newProcessNumber: string;
+  agreementMade: string;
+  causeValue: string;
+  lastMovement: string;
+  citation: string;
+  frLastActionOrMeasures: string;
 }
