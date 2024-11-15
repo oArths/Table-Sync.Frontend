@@ -1,10 +1,11 @@
 "use client";
-import dynamic from "next/dynamic";
-import Table from "../template/table";
-import { Button } from "../components/button";
-import Filter from "../components/dropdown/filter";
 import useLogic from "./logic";
 import { Options } from "./data";
+import dynamic from "next/dynamic";
+import Table from "../template/table";
+import { Header } from "../template/header";
+import { Button } from "../components/button";
+import Filter from "../components/dropdown/filter";
 
 export default function Home() {
   const {
@@ -35,6 +36,7 @@ export default function Home() {
         (download || upload || menu) && "overflow-y-hidden"
       }`}
     >
+      <Header />
       <h1 className="w-11/12 mt-11 text-white text-5xl text-left font-medium">
         Home
       </h1>

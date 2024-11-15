@@ -4,14 +4,25 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/rootReducer";
 import response from "../data/response.json";
 import { Options } from "./data";
+import { useDispatch } from "react-redux";
+import { setInitialResponse } from "@/redux/response/slice";
+import { simplifiedResponseSelector } from "@/redux/response/responseSelects";
 
 const useLogic = () => {
   const [filter, setFilter] = useState(false);
   const [download, setDownload] = useState(false);
   const [upload, setUpload] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<string[]>(Options);
-  const [filteredData, setFilteredData] = useState(response);
   const [searchValue, setSearchValue] = useState("");
+
+  const dispatch = useDispatch();
+
+  dispatch(setInitialResponse(response));
+  const responseClear = useSelector((state: RootState) =>
+    simplifiedResponseSelector(state)
+  );
+  const [filteredData, setFilteredData] = useState(responseClear);
+
   const menu = useSelector((state: RootState) => state.menu.open);
 
   const normalizeString = (str: string) => {
@@ -28,20 +39,21 @@ const useLogic = () => {
       searchValueParam !== undefined ? searchValueParam : searchValue;
     const searchNormalize = normalizeString(searchValueToUse);
 
-    const filteredByOptions = response.filter((item) =>
-      selected.includes(item.Cliente.Status)
+    const filteredByOptions = responseClear.filter((item) =>
+      selected.includes(item.status)
     );
 
     const filteredBySearch = filteredByOptions.filter((item) => {
       const dataToSearch = [
-        item.Processo["Número do Processo"],
-        item.Cliente["Número do Cliente"],
-        item.Cliente.Status,
-        item.Cliente.Locatario,
-        item.Processo["Última movimentação"],
-        item.Contratos["Fim do contrato"],
-        item.Processuais.Fase,
-        item.Cliente.CNPJ,
+        item.id,
+        item.processNumber,
+        item.clientNumber,
+        item.status,
+        item.tenant,
+        item.lastMovement,
+        item.contractEnd,
+        item.phase,
+        item.cnpj,
       ].join(" ");
 
       return normalizeString(dataToSearch).includes(searchNormalize);
