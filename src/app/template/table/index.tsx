@@ -1,12 +1,21 @@
 "use client";
 import { Button } from "@/app/components/button";
-import { Data } from "@/app/data/response.d";
+import { TableType } from "@/app/data/response.d";
 import { useState } from "react";
 import { IPagination } from "./types.d";
+import { useRouter } from "next/navigation";
+interface TableProps {
+  data: TableType;
+}
 
-const Table = ({ data }: Data) => {
+const Table: React.FC<TableProps> = ({ data }) => {
   const [offset, setOffSet] = useState(0);
   const limit = 7;
+  const route = useRouter();
+
+  const handleClickContract = (id: string) => {
+    route.push(`home/contrato/${id}`);
+  };
 
   return (
     <div className="flex flex-col items-start  justify-between w-11/12 min-h-96 h-auto mt-20 bg-primary200  overflow-hidden rounded-md">
@@ -64,7 +73,7 @@ const Table = ({ data }: Data) => {
                 colSpan={7}
                 className="w-full h-full text-gray500 font-light text-base text-center bg-primary200"
               >
-                sem nenhuma informação...
+                nenhuma contrato encontrado...
               </td>
             </tr>
           )}
@@ -97,31 +106,32 @@ const Table = ({ data }: Data) => {
               return (
                 <tr
                   key={Index}
+                  onClick={() => handleClickContract(Item.id)}
                   className="h-14 w-full bg-primary200 border border-solid border-primary300 cursor-pointer "
                 >
                   <th
                     className="text-white font-normal text-base text-center truncate px-4  "
                     scope="row"
                   >
-                    {Item.Processo["Número do Processo"]}
+                    {Item.processNumber}
                   </th>
                   <td className="text-white font-normal text-sm text-center truncate px-4">
-                    {Item.Cliente["Número do Cliente"]}
+                    {Item.clientNumber}
                   </td>
                   <td className="text-white font-normal text-sm text-center truncate px-4">
-                    {Item.Cliente.Status}
+                    {Item.status}
                   </td>
                   <td className="text-white font-normal text-sm text-center truncate px-4">
-                    {Item.Cliente.Locatario}
+                    {Item.tenant}
                   </td>
                   <td className="text-white font-normal text-sm text-center truncate px-4 ">
-                    {dateStyle(Item.Processo["Última movimentação"])}
+                    {dateStyle(Item.lastMovement)}
                   </td>
                   <td className="text-white font-normal text-sm text-center truncate px-4">
-                    {dateStyle(Item.Contratos["Fim do contrato"])}
+                    {dateStyle(Item.contractEnd)}
                   </td>
                   <td className="text-white font-normal text-sm text-center truncate px-4">
-                    {Item.Processuais.Fase}
+                    {Item.phase}
                   </td>
                 </tr>
               );

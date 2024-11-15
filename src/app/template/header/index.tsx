@@ -1,6 +1,4 @@
-"use client";
 import SuspenseImage from "@/app/shared/suspenseImage";
-import { usePathname } from "next/navigation";
 import { Menu } from "../menu";
 import { useDispatch } from "react-redux";
 import { setStateMenu } from "@/redux/menu/slice";
@@ -9,16 +7,14 @@ import { RootState } from "@/redux/rootReducer";
 
 export const Header = () => {
   
-  let path = usePathname();
   const dispatch = useDispatch();
   const isOpen = useSelector((state: RootState) => state.menu.open);
   const handleClick = () => {
     dispatch(setStateMenu(isOpen));
   };
 
-  if (path === "/home") {
     return (
-      <header className="flex items-center justify-center w-full h-20 py-3 bg-primary100 border border-solid  border-b-gray100/50  ">
+      <header className="flex items-center justify-center w-full h-20 py-3 bg-primary100 border border-solid  border-b-gray100/50 border-x-0 border-t-0  ">
         <div className="w-11/12  h-full flex flex-row items-center justify-between ">
           <div className=" w-[100px] h-[30px]">
             <SuspenseImage
@@ -51,5 +47,5 @@ export const Header = () => {
         />
       </header>
     );
-  }
+  
 };
