@@ -78,7 +78,7 @@ export default function Home() {
           />
         </div>
       </nav>
-      <Table data={filteredData} />
+      {filteredData && <Table data={filteredData} />}
       <Download close={() => setDownload(!download)} open={download} />
       <Upload close={() => setUpload(!upload)} open={upload} />
     </div>
