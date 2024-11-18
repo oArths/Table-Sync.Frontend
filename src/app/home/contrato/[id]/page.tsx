@@ -29,10 +29,10 @@ export default function Contrato() {
     <main className=" flex-col  w-full h-screen-minus-80   pb-20 items-start bg-primary100 justify-items-center text-white">
       <Header />
       <div className="flex flex-col items-start w-11/12 mt-5 mb-10">
-        <span className="flex flex-row items-start justify-start gap-1 w-full select-none">
+        <span className="flex flex-row items-start justify-start gap-2 w-full select-none">
           <p
             onClick={() => router.push("/home")}
-            className="text-gray500 font-light text-sm cursor-pointer"
+            className="text-white font-light text-sm cursor-pointer"
           >
             Home
           </p>
