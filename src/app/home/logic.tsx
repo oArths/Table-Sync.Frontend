@@ -39,6 +39,9 @@ const useLogic = () => {
       searchValueParam !== undefined ? searchValueParam : searchValue;
     const searchNormalize = normalizeString(searchValueToUse);
 
+    if(!responseClear ){
+      return null;
+    }
     const filteredByOptions = responseClear.filter((item) =>
       selected.includes(item.status)
     );
