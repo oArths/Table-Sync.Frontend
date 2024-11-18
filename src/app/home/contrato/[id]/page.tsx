@@ -8,20 +8,22 @@ import ContratoView from "@/app/template/contrato/contratoView";
 import { getContractSelector } from "@/redux/response/responseSelects";
 import { useState, useEffect } from "react";
 import { Root } from "@/app/data/response.d";
+import response from "../../../data/response.json";
 
 export default function Contrato() {
   const params = useParams<{ id: string }>();
   const router = useRouter();
+  // const [selectedItem, setSelectedItem] = useState<Root | null>(null);
 
-  const item = useSelector((state: RootState) =>
-    getContractSelector(state, params.id)
-  );
-  const [selectedItem, setSelectedItem] = useState<Root | null>(null);
+  // const item = useSelector((state: RootState) =>
+  //   getContractSelector(state, params.id)
+  // );
 
-  useEffect(() => {
-    setSelectedItem(item);
-  }, [item]);
-  console.log(item);
+  // useEffect(() => {
+  //   setSelectedItem(item);
+  // }, [item]);
+  // console.log(item);
+  const selectedItem = response[1];
 
   return (
     <main className=" flex-col  w-full h-screen-minus-80   pb-20 items-start bg-primary100 justify-items-center text-white">
@@ -43,7 +45,9 @@ export default function Contrato() {
         </span>
         <nav className="flex flex-row items-center justify-between w-full mt-5">
           <p className="text-white font-medium text-3xl ">
-            Contrato {params.id}
+            {selectedItem?.process.processNumber
+              ? `Contrato ${selectedItem.process.processNumber}`
+              : "Contrato não encontrado"}
           </p>
           <Button
             title="Editar"
@@ -52,7 +56,11 @@ export default function Contrato() {
           />
         </nav>
       </div>
-      {selectedItem ? <ContratoView Contracts={selectedItem} /> : <>não a item</>}
+      {selectedItem ? (
+        <ContratoView Contracts={selectedItem} />
+      ) : (
+        <>Dados do contrato não encontrado..</>
+      )}
     </main>
   );
 }
