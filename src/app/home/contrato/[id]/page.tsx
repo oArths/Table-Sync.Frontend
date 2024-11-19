@@ -5,10 +5,14 @@ import { Button } from "@/app/components/button";
 import { RootState } from "@/redux/rootReducer";
 import { useSelector } from "react-redux";
 import ContratoView from "@/app/template/contrato/contratoView";
+import ContratoEdit from "@/app/template/contrato/contratoEdit";
 import { getContractSelector } from "@/redux/response/responseSelects";
 import { useState, useEffect } from "react";
 import { Root } from "@/app/data/response.d";
 import response from "../../../data/response.json";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ContractsContent } from "@/app/template/card/edit/cliente/zodValidation";
 
 export default function Contrato() {
   const params = useParams<{ id: string }>();
@@ -24,11 +28,39 @@ export default function Contrato() {
   // }, [item]);
   // console.log(item);
   const selectedItem = response[1];
+   const {
+    register,
+    handleSubmit,
+    setValue,
+    getValues,
+    formState: { errors },
+    reset,
+  } = useForm<ContractsContent>({
+    defaultValues: {
+      status: selectedItem.client.status,
+      clientNumber: selectedItem.client.clientNumber.toString(),
+      kaDate: selectedItem.client.kaDate,
+      inclusionInLegalControl: selectedItem.client.inclusionInLegalControl,
+      cnpj: selectedItem.client.cnpj,
+      tenant: selectedItem.client.tenant,
+      supplier : selectedItem.contracts.supplier,
+      overdueAmount : selectedItem.contracts.overdueAmount,
+      
+    },
+    resolver: zodResolver(ContractsContent),
+  });
+  const onSubmit: SubmitHandler<ContractsContent> = (data) => {
+    console.log(data); 
+  };
+
 
   return (
     <main className=" flex-col  w-full h-screen-minus-80   pb-20 items-start bg-primary100 justify-items-center text-white">
       <Header />
-      <div className="flex flex-col items-start w-11/12 mt-5 mb-10">
+      <form  className="flex flex-col items-start w-11/12"     onSubmit={handleSubmit(onSubmit)}
+      >
+
+      <div className="flex flex-col items-start w-full mt-5 mb-10">
         <span className="flex flex-row items-start justify-start gap-2 w-full select-none">
           <p
             onClick={() => router.push("/home")}
@@ -37,7 +69,7 @@ export default function Contrato() {
             Home
           </p>
           <p className="text-gray400 font-light text-sm cursor-default">
-            {">"}
+            {"/"}
           </p>
           <p className="text-gray400 font-light text-sm cursor-default">
             Contrato
@@ -51,16 +83,24 @@ export default function Contrato() {
           </p>
           <Button
             title="Editar"
+            type="submit"
             className="bg-blue200 w-36 h-10  "
             loading={false}
           />
         </nav>
       </div>
       {selectedItem ? (
-        <ContratoView Contracts={selectedItem} />
+        // <ContratoView Contracts={selectedItem} />
+        <ContratoEdit Contracts={selectedItem} 
+        register={register}
+        setValue={setValue}
+    getValues={getValues}
+        errors={errors} />
       ) : (
         <>Dados do contrato não encontrado..</>
       )}
+            </form>
+
     </main>
   );
 }
