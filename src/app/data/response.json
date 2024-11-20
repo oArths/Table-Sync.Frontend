@@ -11,16 +11,16 @@
     },
     "contracts": {
       "supplier": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
-      "overdueAmount": "R$ 4.500,00",
+      "overdueAmount": "55501",
       "fo": "MDA",
       "contractEnd": "15/08/2027"
     },
     "costsAndValues": {
-      "initialCourtCosts": "R$ 12.500,00",
-      "initialEnforcementAmount": "R$ 268.526,00",
-      "historicalAmountOrSentence": "R$ 12.500,00",
-      "otherCourtCosts": "R$ 9.500,00",
-      "gcPaidCosts": "R$ 9.500,00"
+      "initialCourtCosts": "12.500,00",
+      "initialEnforcementAmount": "26852600",
+      "historicalAmountOrSentence": "1250000",
+      "otherCourtCosts": " 950000",
+      "gcPaidCosts": " 950000"
     },
     "procedural": {
       "judicialRecovery": "RECUPERAÇÃO JUDICIAL",
@@ -29,8 +29,8 @@
         "sentenceType": "Procedente",
         "proceduralSituation": "Ativo"
       },
-      "amountReceivedPaidToGrenke": "R$ 9.500,00",
-      "amountPaidByGrenke": "R$ 9.500,00",
+      "amountReceivedPaidToGrenke": "950000",
+      "amountPaidByGrenke": "9.500,00",
       "phase": "Cumprimento da Sentença",
       "frContact": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
@@ -38,7 +38,7 @@
       "processNumber": "0012857-36.2021.8.26.0554",
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Não",
-      "causeValue": "R$ 9.500,00",
+      "causeValue": "9.500,00",
       "lastMovement": "10/11/2024",
       "citation": "Não",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
@@ -56,16 +56,16 @@
     },
     "contracts": {
       "supplier": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
-      "overdueAmount": "R$ 4.500,00",
+      "overdueAmount": "4.500,00",
       "fo": "MDA",
       "contractEnd": "15/08/2027"
     },
     "costsAndValues": {
-      "initialCourtCosts": "R$ 12.500,00",
-      "initialEnforcementAmount": "R$ 268.526,00",
-      "historicalAmountOrSentence": "R$ 12.500,00",
-      "otherCourtCosts": "R$ 9.500,00",
-      "gcPaidCosts": "R$ 9.500,00"
+      "initialCourtCosts": " 12.500,00",
+      "initialEnforcementAmount": " 268.526,00",
+      "historicalAmountOrSentence": " 12.500,00",
+      "otherCourtCosts": " 9.500,00",
+      "gcPaidCosts": " 9.500,00"
     },
     "procedural": {
       "judicialRecovery": "n/a",
@@ -74,8 +74,8 @@
         "sentenceType": "Improcedente",
         "proceduralSituation": "Arquivado"
       },
-      "amountReceivedPaidToGrenke": "R$ 9.500,00",
-      "amountPaidByGrenke": "R$ 9.500,00",
+      "amountReceivedPaidToGrenke": " 9.500,00",
+      "amountPaidByGrenke": " 9.500,00",
       "phase": "Arquivado",
       "frContact": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
@@ -83,7 +83,7 @@
       "processNumber": "0012857-36.2021.8.26.0554",
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Sim",
-      "causeValue": "R$ 9.500,00",
+      "causeValue": " 9.500,00",
       "lastMovement": "10/11/2024",
       "citation": "Não",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
@@ -101,16 +101,16 @@
     },
     "contracts": {
       "supplier": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
-      "overdueAmount": "R$ 4.500,00",
+      "overdueAmount": " 4.500,00",
       "fo": "MDA",
       "contractEnd": "15/08/2027"
     },
     "costsAndValues": {
-      "initialCourtCosts": "R$ 12.500,00",
-      "initialEnforcementAmount": "R$ 268.526,00",
-      "historicalAmountOrSentence": "R$ 12.500,00",
-      "otherCourtCosts": "R$ 9.500,00",
-      "gcPaidCosts": "R$ 9.500,00"
+      "initialCourtCosts": " 12.500,00",
+      "initialEnforcementAmount": " 268.526,00",
+      "historicalAmountOrSentence": " 12.500,00",
+      "otherCourtCosts": " 9.500,00",
+      "gcPaidCosts": " 9.500,00"
     },
     "procedural": {
       "judicialRecovery": "RECUPERAÇÃO JUDICIAL",
@@ -119,8 +119,8 @@
         "sentenceType": "Improcedente",
         "proceduralSituation": "Arquivado"
       },
-      "amountReceivedPaidToGrenke": "R$ 9.500,00",
-      "amountPaidByGrenke": "R$ 9.500,00",
+      "amountReceivedPaidToGrenke": " 9.500,00",
+      "amountPaidByGrenke": " 9.500,00",
       "phase": "Fase de citação",
       "frContact": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
@@ -128,7 +128,7 @@
       "processNumber": "0012857-36.2021.8.26.0554",
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Sim",
-      "causeValue": "R$ 9.500,00",
+      "causeValue": " 9.500,00",
       "lastMovement": "10/11/2024",
       "citation": "Sim",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
@@ -146,16 +146,16 @@
     },
     "contracts": {
       "supplier": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
-      "overdueAmount": "R$ 4.500,00",
+      "overdueAmount": " 4.500,00",
       "fo": "MDA",
       "contractEnd": "15/08/2027"
     },
     "costsAndValues": {
-      "initialCourtCosts": "R$ 12.500,00",
-      "initialEnforcementAmount": "R$ 268.526,00",
-      "historicalAmountOrSentence": "R$ 12.500,00",
-      "otherCourtCosts": "R$ 9.500,00",
-      "gcPaidCosts": "R$ 9.500,00"
+      "initialCourtCosts": " 12.500,00",
+      "initialEnforcementAmount": " 268.526,00",
+      "historicalAmountOrSentence": " 12.500,00",
+      "otherCourtCosts": " 9.500,00",
+      "gcPaidCosts": " 9.500,00"
     },
     "procedural": {
       "judicialRecovery": "RECUPERAÇÃO JUDICIAL",
@@ -164,8 +164,8 @@
         "sentenceType": "Procedente",
         "proceduralSituation": "Ativo"
       },
-      "amountReceivedPaidToGrenke": "R$ 9.500,00",
-      "amountPaidByGrenke": "R$ 9.500,00",
+      "amountReceivedPaidToGrenke": " 9.500,00",
+      "amountPaidByGrenke": " 9.500,00",
       "phase": "Cumprimento da Sentença",
       "frContact": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
@@ -173,7 +173,7 @@
       "processNumber": "0012857-36.2021.8.26.0554",
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Não",
-      "causeValue": "R$ 9.500,00",
+      "causeValue": " 9.500,00",
       "lastMovement": "10/11/2024",
       "citation": "Não",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
@@ -191,16 +191,16 @@
     },
     "contracts": {
       "supplier": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
-      "overdueAmount": "R$ 4.500,00",
+      "overdueAmount": " 4.500,00",
       "fo": "MDA",
       "contractEnd": "15/08/2027"
     },
     "costsAndValues": {
-      "initialCourtCosts": "R$ 12.500,00",
-      "initialEnforcementAmount": "R$ 268.526,00",
-      "historicalAmountOrSentence": "R$ 12.500,00",
-      "otherCourtCosts": "R$ 9.500,00",
-      "gcPaidCosts": "R$ 9.500,00"
+      "initialCourtCosts": " 12.500,00",
+      "initialEnforcementAmount": " 268.526,00",
+      "historicalAmountOrSentence": " 12.500,00",
+      "otherCourtCosts": " 9.500,00",
+      "gcPaidCosts": " 9.500,00"
     },
     "procedural": {
       "judicialRecovery": "n/a",
@@ -209,8 +209,8 @@
         "sentenceType": "Improcedente",
         "proceduralSituation": "Arquivado"
       },
-      "amountReceivedPaidToGrenke": "R$ 9.500,00",
-      "amountPaidByGrenke": "R$ 9.500,00",
+      "amountReceivedPaidToGrenke": " 9.500,00",
+      "amountPaidByGrenke": " 9.500,00",
       "phase": "Arquivado",
       "frContact": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
@@ -218,7 +218,7 @@
       "processNumber": "0012857-36.2021.8.26.0554",
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Sim",
-      "causeValue": "R$ 9.500,00",
+      "causeValue": " 9.500,00",
       "lastMovement": "10/11/2024",
       "citation": "Não",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
@@ -236,16 +236,16 @@
     },
     "contracts": {
       "supplier": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
-      "overdueAmount": "R$ 4.500,00",
+      "overdueAmount": " 4.500,00",
       "fo": "MDA",
       "contractEnd": "15/08/2027"
     },
     "costsAndValues": {
-      "initialCourtCosts": "R$ 12.500,00",
-      "initialEnforcementAmount": "R$ 268.526,00",
-      "historicalAmountOrSentence": "R$ 12.500,00",
-      "otherCourtCosts": "R$ 9.500,00",
-      "gcPaidCosts": "R$ 9.500,00"
+      "initialCourtCosts": " 12.500,00",
+      "initialEnforcementAmount": " 268.526,00",
+      "historicalAmountOrSentence": " 12.500,00",
+      "otherCourtCosts": " 9.500,00",
+      "gcPaidCosts": " 9.500,00"
     },
     "procedural": {
       "judicialRecovery": "RECUPERAÇÃO JUDICIAL",
@@ -254,8 +254,8 @@
         "sentenceType": "Improcedente",
         "proceduralSituation": "Arquivado"
       },
-      "amountReceivedPaidToGrenke": "R$ 9.500,00",
-      "amountPaidByGrenke": "R$ 9.500,00",
+      "amountReceivedPaidToGrenke": " 9.500,00",
+      "amountPaidByGrenke": " 9.500,00",
       "phase": "Fase de citação",
       "frContact": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
@@ -263,7 +263,7 @@
       "processNumber": "0012857-36.2021.8.26.0554",
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Sim",
-      "causeValue": "R$ 9.500,00",
+      "causeValue": " 9.500,00",
       "lastMovement": "10/11/2024",
       "citation": "Sim",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
@@ -281,16 +281,16 @@
     },
     "contracts": {
       "supplier": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
-      "overdueAmount": "R$ 4.500,00",
+      "overdueAmount": " 4.500,00",
       "fo": "MDA",
       "contractEnd": "15/08/2027"
     },
     "costsAndValues": {
-      "initialCourtCosts": "R$ 12.500,00",
-      "initialEnforcementAmount": "R$ 268.526,00",
-      "historicalAmountOrSentence": "R$ 12.500,00",
-      "otherCourtCosts": "R$ 9.500,00",
-      "gcPaidCosts": "R$ 9.500,00"
+      "initialCourtCosts": " 12.500,00",
+      "initialEnforcementAmount": " 268.526,00",
+      "historicalAmountOrSentence": " 12.500,00",
+      "otherCourtCosts": " 9.500,00",
+      "gcPaidCosts": " 9.500,00"
     },
     "procedural": {
       "judicialRecovery": "RECUPERAÇÃO JUDICIAL",
@@ -299,8 +299,8 @@
         "sentenceType": "Procedente",
         "proceduralSituation": "Ativo"
       },
-      "amountReceivedPaidToGrenke": "R$ 9.500,00",
-      "amountPaidByGrenke": "R$ 9.500,00",
+      "amountReceivedPaidToGrenke": " 9.500,00",
+      "amountPaidByGrenke": " 9.500,00",
       "phase": "Cumprimento da Sentença",
       "frContact": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
@@ -308,7 +308,7 @@
       "processNumber": "0012857-36.2021.8.26.0554",
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Não",
-      "causeValue": "R$ 9.500,00",
+      "causeValue": " 9.500,00",
       "lastMovement": "10/11/2024",
       "citation": "Não",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
@@ -326,16 +326,16 @@
     },
     "contracts": {
       "supplier": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
-      "overdueAmount": "R$ 4.500,00",
+      "overdueAmount": " 4.500,00",
       "fo": "MDA",
       "contractEnd": "15/08/2027"
     },
     "costsAndValues": {
-      "initialCourtCosts": "R$ 12.500,00",
-      "initialEnforcementAmount": "R$ 268.526,00",
-      "historicalAmountOrSentence": "R$ 12.500,00",
-      "otherCourtCosts": "R$ 9.500,00",
-      "gcPaidCosts": "R$ 9.500,00"
+      "initialCourtCosts": " 12.500,00",
+      "initialEnforcementAmount": " 268.526,00",
+      "historicalAmountOrSentence": " 12.500,00",
+      "otherCourtCosts": " 9.500,00",
+      "gcPaidCosts": " 9.500,00"
     },
     "procedural": {
       "judicialRecovery": "n/a",
@@ -344,8 +344,8 @@
         "sentenceType": "Improcedente",
         "proceduralSituation": "Arquivado"
       },
-      "amountReceivedPaidToGrenke": "R$ 9.500,00",
-      "amountPaidByGrenke": "R$ 9.500,00",
+      "amountReceivedPaidToGrenke": " 9.500,00",
+      "amountPaidByGrenke": " 9.500,00",
       "phase": "Arquivado",
       "frContact": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
@@ -353,7 +353,7 @@
       "processNumber": "0012857-36.2021.8.26.0554",
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Sim",
-      "causeValue": "R$ 9.500,00",
+      "causeValue": " 9.500,00",
       "lastMovement": "10/11/2024",
       "citation": "Não",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
@@ -371,16 +371,16 @@
     },
     "contracts": {
       "supplier": "SI GROUP COMERCIO E SERVICOS DE INFORMATICA LTDA SI GROUP INFORMATICA",
-      "overdueAmount": "R$ 4.500,00",
+      "overdueAmount": " 4.500,00",
       "fo": "MDA",
       "contractEnd": "15/08/2027"
     },
     "costsAndValues": {
-      "initialCourtCosts": "R$ 12.500,00",
-      "initialEnforcementAmount": "R$ 268.526,00",
-      "historicalAmountOrSentence": "R$ 12.500,00",
-      "otherCourtCosts": "R$ 9.500,00",
-      "gcPaidCosts": "R$ 9.500,00"
+      "initialCourtCosts": " 12.500,00",
+      "initialEnforcementAmount": " 268.526,00",
+      "historicalAmountOrSentence": " 12.500,00",
+      "otherCourtCosts": " 9.500,00",
+      "gcPaidCosts": " 9.500,00"
     },
     "procedural": {
       "judicialRecovery": "RECUPERAÇÃO JUDICIAL",
@@ -389,8 +389,8 @@
         "sentenceType": "Improcedente",
         "proceduralSituation": "Arquivado"
       },
-      "amountReceivedPaidToGrenke": "R$ 9.500,00",
-      "amountPaidByGrenke": "R$ 9.500,00",
+      "amountReceivedPaidToGrenke": " 9.500,00",
+      "amountPaidByGrenke": " 9.500,00",
       "phase": "Fase de citação",
       "frContact": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
@@ -398,7 +398,7 @@
       "processNumber": "0012857-36.2021.8.26.0554",
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Sim",
-      "causeValue": "R$ 9.500,00",
+      "causeValue": " 9.500,00",
       "lastMovement": "10/11/2024",
       "citation": "Sim",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
