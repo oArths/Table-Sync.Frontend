@@ -1,14 +1,15 @@
 "use client";
 import InputEdit from "@/app/components/input/inputEdit";
-import InputCNPJ from "@/app/components/input/inputCNPJ";
+import InputMask from "@/app/components/input/InputMask";
+import {  Controller } from "react-hook-form";
 import Options from "@/app/components/dropdown/option";
-
 import { useState } from "react";
 interface ICliente {
   register: any;
   errors: any;
   getValues: any;
   setValue: any;
+  control: any;
 }
 
 export default function Cliente({
@@ -16,6 +17,7 @@ export default function Cliente({
   errors,
   getValues,
   setValue,
+  control,
 }: ICliente) {
   const Option = ["KU", "KA", "KL", "KD"];
   const [optionState, setOptionState] = useState(false);
@@ -29,12 +31,19 @@ export default function Cliente({
         errorsMessage={errors.tenant?.message}
         {...register("tenant")}
       />
-      <InputCNPJ
-        label="CNPJ"
-        onChange={(e) => setValue("cnpj", e.target.value)}
-        errorsType={errors.cnpj}
-        errorsMessage={errors.cnpj?.message}
-        {...register("cnpj")}
+     <Controller
+        name="cnpj"
+        control={control}
+        render={({ field }) => (
+          <InputMask
+            label="CNPJ"
+            mask={[/\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '/', /\d/, /\d/, /\d/,/\d/, '-', /\d/, /\d/]}
+            value={field.value || ""}
+            onChange={field.onChange} 
+            errorsType={errors.cnpj}
+            errorsMessage={errors.cnpj?.message}
+          />
+        )}
       />
       <div className="flex flex-row items-start gap-5 justify-between w-full">
         <InputEdit

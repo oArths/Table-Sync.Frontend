@@ -1,32 +1,95 @@
 import InputEdit from "@/app/components/input/inputEdit";
-import { CostsAndValues as CostsAndValuesTypes } from "@/app/data/response.d";
+import { Controller } from "react-hook-form";
+
 interface ICustaValores {
-  CustaValoresValues: CostsAndValuesTypes;
+  errors: any;
+  control: any;
 }
 
-export default function CustaValores({ CustaValoresValues }: ICustaValores) {
+export default function CustaValores({
+  errors,
+
+  control,
+}: ICustaValores) {
   return (
     <aside className=" flex flex-col items-center justify-around gap-y-5  pt-8 pb-20 w-10/12 h-full">
-      <InputEdit
-        label="Valor das custas iniciais"
-        value={CustaValoresValues.initialCourtCosts}
+      <Controller
+        name="initialCourtCosts"
+        control={control}
+        render={({ field }) => (
+          <InputEdit
+            label="Valor das custas iniciais"
+            value={`R$ ${field.value || ""}`}
+            onChange={(e) =>
+              field.onChange(e.target.value.replace("R$", "").trim())
+            }
+            errorsType={errors.initialCourtCosts}
+            errorsMessage={errors.initialCourtCosts?.message}
+          />
+        )}
       />
-      <InputEdit
-        label="Valor inicial do cumprimento "
-        value={CustaValoresValues.initialEnforcementAmount}
+      <Controller
+        name="initialEnforcementAmount"
+        control={control}
+        render={({ field }) => (
+          <InputEdit
+            label="Valor inicial do cumprimento"
+            value={`R$ ${field.value || ""}`}
+            onChange={(e) =>
+              field.onChange(e.target.value.replace("R$", "").trim())
+            }
+            errorsType={errors.initialEnforcementAmount}
+            errorsMessage={errors.initialEnforcementAmount?.message}
+          />
+        )}
       />
-      <InputEdit
-        label="Valor histórico/Sentença"
-        value={CustaValoresValues.historicalAmountOrSentence}
+      <Controller
+        name="historicalAmountOrSentence"
+        control={control}
+        render={({ field }) => (
+          <InputEdit
+            label="Valor histórico/Sentença"
+            value={`R$ ${field.value || ""}`}
+            onChange={(e) =>
+              field.onChange(e.target.value.replace("R$", "").trim())
+            }
+            errorsType={errors.historicalAmountOrSentence}
+            errorsMessage={errors.historicalAmountOrSentence?.message}
+          />
+        )}
       />
+
       <div className="flex flex-row items-center gap-5 justify-between w-full">
-        <InputEdit
-          label="Valor de outras custas"
-          value={CustaValoresValues.otherCourtCosts}
+        <Controller
+          name="otherCourtCosts"
+          control={control}
+          render={({ field }) => (
+            <InputEdit
+              label="Valor de outras custas"
+             value={`R$ ${field.value || ""}`}
+            onChange={(e) =>
+              field.onChange(e.target.value.replace("R$", "").trim())
+            }
+              errorsType={errors.otherCourtCosts}
+              errorsMessage={errors.otherCourtCosts?.message}
+            />
+          )}
         />
-        <InputEdit
-          label="Custas pagas GC "
-          value={CustaValoresValues.gcPaidCosts}
+
+        <Controller
+          name="gcPaidCosts"
+          control={control}
+          render={({ field }) => (
+            <InputEdit
+              label="Custas pagas GC"
+             value={`R$ ${field.value || ""}`}
+            onChange={(e) =>
+              field.onChange(e.target.value.replace("R$", "").trim())
+            }
+              errorsType={errors.gcPaidCosts}
+              errorsMessage={errors.gcPaidCosts?.message}
+            />
+          )}
         />
       </div>
     </aside>
