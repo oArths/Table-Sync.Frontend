@@ -129,8 +129,90 @@ export const ContractsContent = z.object({
     .refine((value) => value.length <= 50, {
       message: "O Valor é muito grande, passou de 50 caracteres",
     }),
-    
-    
+    judicialRecovery: z
+    .string(),
+    sentence: z
+    .string(),
+    sentenceType: z
+    .string(),
+    proceduralSituation: z
+    .string(),
+    phase: z
+    .string(),
+    amountReceivedPaidToGrenke: z
+    .string()
+    .refine((value) => /^[0-9.,]+$/.test(value), {
+      message: "O valor deve conter apenas números.",
+    })
+    .refine((value) => value.length > 0, {
+      message: "O valor é obrigatório e não pode ser vazio.",
+    })
+    .refine((value) => value.length <= 50, {
+      message: "O Valor é muito grande, passou de 50 caracteres",
+    }),
+    amountPaidByGrenke: z
+    .string()
+    .refine((value) => /^[0-9.,]+$/.test(value), {
+      message: "O valor deve conter apenas números.",
+    })
+    .refine((value) => value.length > 0, {
+      message: "O valor é obrigatório e não pode ser vazio.",
+    })
+    .refine((value) => value.length <= 50, {
+      message: "O Valor é muito grande, passou de 50 caracteres",
+    }),
+    frContact: z
+    .string()
+    .min(1, { message: "O Contrato FR é obrigatorio" })
+    .max(500, { message: "o Campo é muito grande, passou de 500 caracteres" }),
+    processNumber: z
+    .string({
+      required_error: "Número do processo é obrigatório.",
+    })
+    .refine((doc) => {
+      const replacedDoc = doc.replace(/\D/g, "");
+      return replacedDoc.length === 20;
+    }, "Número do processo deve conter exatamente 20 caracteres.")
+    .refine((doc) => {
+      const replacedDoc = doc.replace(/\D/g, "");
+      return !!Number(replacedDoc);
+    }, "Número do processo deve conter apenas números."),
+    newProcessNumber: z
+    .string({
+      required_error: "O Novo Número do processo é obrigatório.",
+    })
+    .refine((doc) => {
+      const replacedDoc = doc.replace(/\D/g, "");
+      return replacedDoc.length === 10;
+    }, "O Novo Número do processo deve conter exatamente 20 caracteres.")
+    .refine((doc) => {
+      const replacedDoc = doc.replace(/\D/g, "");
+      return !!Number(replacedDoc);
+    }, "O Novo Número do processo deve conter apenas números."),
+    agreementMade: z
+    .string(),
+    causeValue: z
+    .string()
+    .refine((value) => /^[0-9.,]+$/.test(value), {
+      message: "O valor deve conter apenas números.",
+    })
+    .refine((value) => value.length > 0, {
+      message: "O valor é obrigatório e não pode ser vazio.",
+    })
+    .refine((value) => value.length <= 50, {
+      message: "O Valor é muito grande, passou de 50 caracteres",
+    }),
+    lastMovement: z
+    .string({
+      required_error: "Data é obrigatória.",
+    })
+    .refine(isBrazilianDate, "Data inválida ou não pode ser no futuro."),
+    citation: z
+    .string(),
+    frLastActionOrMeasures: z
+    .string()
+    .min(1, { message: "O Contrato FR é obrigatorio" })
+    .max(500, { message: "o Campo é muito grande, passou de 500 caracteres" }),
 });
 
 export type ContractsContent = z.infer<typeof ContractsContent>;

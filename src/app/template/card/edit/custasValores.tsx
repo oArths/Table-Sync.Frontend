@@ -8,7 +8,6 @@ interface ICustaValores {
 
 export default function CustaValores({
   errors,
-
   control,
 }: ICustaValores) {
   return (
@@ -66,10 +65,10 @@ export default function CustaValores({
           render={({ field }) => (
             <InputEdit
               label="Valor de outras custas"
-             value={`R$ ${field.value || ""}`}
-            onChange={(e) =>
-              field.onChange(e.target.value.replace("R$", "").trim())
-            }
+              value={`R$ ${field.value || ""}`}
+              onChange={(e) =>
+                field.onChange(e.target.value.replace("R$", "").trim())
+              }
               errorsType={errors.otherCourtCosts}
               errorsMessage={errors.otherCourtCosts?.message}
             />
@@ -82,10 +81,10 @@ export default function CustaValores({
           render={({ field }) => (
             <InputEdit
               label="Custas pagas GC"
-             value={`R$ ${field.value || ""}`}
-            onChange={(e) =>
-              field.onChange(e.target.value.replace("R$", "").trim())
-            }
+              value={`R$ ${field.value || ""}`}
+              onChange={(e) =>
+                field.onChange(e.target.value.replace("R$", "").trim())
+              }
               errorsType={errors.gcPaidCosts}
               errorsMessage={errors.gcPaidCosts?.message}
             />

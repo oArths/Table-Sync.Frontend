@@ -48,16 +48,20 @@ export default function ContratoEdit({
     custasValores: <CustaValores control={control} errors={errors} />,
     processuais: (
       <Processuais
-        processuaisValues={Contracts.procedural}
-        // register={register}
-        // errors={errors}
+      register={register}
+      errors={errors}
+      control={control}
+      setValue={setValue}
+      getValues={getValues}
       />
     ),
     processo: (
       <Processo
-        processValues={Contracts.process}
-        // register={register}
-        // errors={errors}
+      register={register}
+      errors={errors}
+      control={control}
+      setValue={setValue}
+      getValues={getValues}
       />
     ),
   };
