@@ -763,6 +763,13 @@
     hoist-non-react-statics "^3.3.0"
     redux "^4.0.0"
 
+"@types/react-text-mask@^5.4.14":
+  version "5.4.14"
+  resolved "https://registry.yarnpkg.com/@types/react-text-mask/-/react-text-mask-5.4.14.tgz#eb7d7b2a47e41b76c6473f106238493e207d3ee1"
+  integrity sha512-VkQuH+7Ol+ue/EFe9EFqJAmDe3ay5VML29l3aJkdzAriMhiprJOmdAFjZ3jOT6p3+nBgEUHxaQtUgg8k8Sk5wA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^18.3.12":
   version "18.3.12"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.3.12.tgz#99419f182ccd69151813b7ee24b792fe08774f60"
@@ -1846,7 +1853,7 @@ log-symbols@^5.1.0:
     chalk "^5.0.0"
     is-unicode-supported "^1.1.0"
 
-loose-envify@^1.0.0, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -1995,6 +2002,13 @@ next@15.0.2:
     "@next/swc-win32-arm64-msvc" "15.0.2"
     "@next/swc-win32-x64-msvc" "15.0.2"
     sharp "^0.33.5"
+
+ng2-currency-mask@^13.0.3:
+  version "13.0.3"
+  resolved "https://registry.yarnpkg.com/ng2-currency-mask/-/ng2-currency-mask-13.0.3.tgz#5b460d10d2881a9089b8e59ee364cd17835adfd3"
+  integrity sha512-ZTaY7sO2vFTfGtjfdu7SrHIeaRzb3oDSVHKvtcb9sYiF4ez8vzRPNjnzcmsk71RjMWl24XMFtmBDPyx/NxXsFg==
+  dependencies:
+    tslib ">= 2.3.0"
 
 node-domexception@^1.0.0:
   version "1.0.0"
@@ -2436,7 +2450,7 @@ prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.8.1:
+prop-types@^15.5.6, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2460,12 +2474,13 @@ react-day-picker@8.10.1:
   resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-8.10.1.tgz#4762ec298865919b93ec09ba69621580835b8e80"
   integrity sha512-TMx7fNbhLk15eqcMt+7Z7S2KF7mfTId/XJDjKE8f+IUcFn0l08/kI4FiYTL/0yuOLmEcbR4Fwe3GJf/NiiMnPA==
 
-react-dom@19.0.0-rc-02c0e824-20241028:
-  version "19.0.0-rc-02c0e824-20241028"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0-rc-02c0e824-20241028.tgz#84999552fe7369275aa7800cf009372f59945ad1"
-  integrity sha512-LrZf3DfHL6Fs07wwlUCHrzFTCMM19yA99MvJpfLokN4I2nBAZvREGZjZAn8VPiSfN72+i9j1eL4wB8gC695F3Q==
+react-dom@^18.0.0:
+  version "18.3.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.3.1.tgz#c2265d79511b57d479b3dd3fdfa51536494c5cb4"
+  integrity sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==
   dependencies:
-    scheduler "0.25.0-rc-02c0e824-20241028"
+    loose-envify "^1.1.0"
+    scheduler "^0.23.2"
 
 react-dropzone@^14.3.5:
   version "14.3.5"
@@ -2522,10 +2537,19 @@ react-style-singleton@^2.2.1:
     invariant "^2.2.4"
     tslib "^2.0.0"
 
-react@19.0.0-rc-02c0e824-20241028:
-  version "19.0.0-rc-02c0e824-20241028"
-  resolved "https://registry.yarnpkg.com/react/-/react-19.0.0-rc-02c0e824-20241028.tgz#d0f92b734b245471359fec4be89b3f26e23f3197"
-  integrity sha512-GbZ7hpPHQMiEu53BqEaPQVM/4GG4hARo+mqEEnx4rYporDvNvUjutiAFxYFSbu6sgHwcr7LeFv8htEOwALVA2A==
+react-text-mask@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/react-text-mask/-/react-text-mask-5.5.0.tgz#468ea690160b364981205f5633e7475e939383ff"
+  integrity sha512-SLJlJQxa0uonMXsnXRpv5abIepGmHz77ylQcra0GNd7Jtk4Wj2Mtp85uGQHv1avba2uI8ZvRpIEQPpJKsqRGYw==
+  dependencies:
+    prop-types "^15.5.6"
+
+react@^18.0.0:
+  version "18.3.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.3.1.tgz#49ab892009c53933625bd16b2533fc754cab2891"
+  integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
+  dependencies:
+    loose-envify "^1.1.0"
 
 read-cache@^1.0.0:
   version "1.0.0"
@@ -2634,10 +2658,12 @@ safe-buffer@~5.2.0:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
 
-scheduler@0.25.0-rc-02c0e824-20241028:
-  version "0.25.0-rc-02c0e824-20241028"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0-rc-02c0e824-20241028.tgz#3e1beda3dc0a9e92b90b28f2df9f3fd2f0597ed3"
-  integrity sha512-GysnKjmMSaWcwsKTLzeJO0IhU3EyIiC0ivJKE6yDNLqt3IMxDByx8b6lSNXRNdN+ULUY0WLLjSPaZ0LuU/GnTg==
+scheduler@^0.23.2:
+  version "0.23.2"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.23.2.tgz#414ba64a3b282892e944cf2108ecc078d115cdc3"
+  integrity sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==
+  dependencies:
+    loose-envify "^1.1.0"
 
 semver@^6.3.1:
   version "6.3.1"
@@ -2938,6 +2964,11 @@ tailwindcss@^3.4.14:
     resolve "^1.22.8"
     sucrase "^3.35.0"
 
+text-mask-addons@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/text-mask-addons/-/text-mask-addons-3.8.0.tgz#17b61ef665a4f36811f2ea1f01a223b4be61ab26"
+  integrity sha512-VSZSdc/tKn4zGxgpJ+uNBzoW1t472AoAFIlbw1K7hSNXz0DfSBYDJNRxLqgxOfWw1BY2z6DQpm7g0sYZn5qLpg==
+
 thenify-all@^1.0.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/thenify-all/-/thenify-all-1.6.0.tgz#1a1918d402d8fc3f98fbf234db0bcc8cc10e9726"
@@ -2991,7 +3022,7 @@ tsconfig-paths@^4.2.0:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@^2.0.0, tslib@^2.0.1, tslib@^2.1.0, tslib@^2.4.0, tslib@^2.7.0:
+"tslib@>= 2.3.0", tslib@^2.0.0, tslib@^2.0.1, tslib@^2.1.0, tslib@^2.4.0, tslib@^2.7.0:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.8.1.tgz#612efe4ed235d567e8aba5f2a5fab70280ade83f"
   integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==
