@@ -40,7 +40,7 @@ interface IOption {
               <p
                 key={index}
                 onClick={() => onSelect(value)}
-                className="flex flex-row items-center px-2 my-1 font-regular text-base text-gray500 justify-between w-11/12 rounded-sm hover:bg-primary400 cursor-pointer select-none"
+                className="flex flex-row items-center px-2 first:mt-2 last:mb-2  font-regular text-base text-gray500 justify-between w-11/12 rounded-sm hover:bg-primary400 cursor-pointer select-none"
               >
                 {value}
                 {value === select && (
