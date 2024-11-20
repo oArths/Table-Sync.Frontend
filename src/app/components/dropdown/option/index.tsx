@@ -31,7 +31,7 @@ interface IOption {
       </>
       {open && (
         <div
-          className={`absolute flex flex-col top-full items-center justify-center py-1 z-10 w-full mt-1 bg-primary300 rounded ${
+          className={`absolute flex flex-col top-full items-center justify-center py-1 z-10 w-full max-h-40 overflow-auto  mt-1 bg-primary300 rounded ${
             open ? "animate-fadeInDown" : "animate-fadeOutUp"
           }`}
         >
@@ -40,7 +40,7 @@ interface IOption {
               <p
                 key={index}
                 onClick={() => onSelect(value)}
-                className="flex flex-row items-center px-2 font-regular text-base text-gray500 justify-between w-11/12 rounded-sm hover:bg-primary400 cursor-pointer select-none"
+                className="flex flex-row items-center px-2 my-1 font-regular text-base text-gray500 justify-between w-11/12 rounded-sm hover:bg-primary400 cursor-pointer select-none"
               >
                 {value}
                 {value === select && (
