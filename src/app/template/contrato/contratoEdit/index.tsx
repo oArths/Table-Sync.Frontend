@@ -13,15 +13,24 @@ interface IContratoView {
   errors: any;
   getValues: any;
   setValue: any;
+  control: any;
 }
 
-export default function ContratoEdit({ Contracts, register, errors, getValues , setValue}: IContratoView) {
+export default function ContratoEdit({
+  Contracts,
+  register,
+  errors,
+  getValues,
+  setValue,
+  control,
+}: IContratoView) {
   const [activeTable, setActiveTable] = useState<string>("cliente");
 
   const tables: { [key: string]: React.ReactNode } = {
     cliente: (
       <Cliente
         register={register}
+        control={control}
         errors={errors}
         setValue={setValue}
         getValues={getValues}
@@ -29,18 +38,14 @@ export default function ContratoEdit({ Contracts, register, errors, getValues , 
     ),
     contratos: (
       <Contrato
-        contratoValues={Contracts.contracts}
         register={register}
+        control={control}
         errors={errors}
+        setValue={setValue}
+        getValues={getValues}
       />
     ),
-    custasValores: (
-      <CustaValores
-        CustaValoresValues={Contracts.costsAndValues}
-        // register={register}
-        // errors={errors}
-      />
-    ),
+    custasValores: <CustaValores control={control} errors={errors} />,
     processuais: (
       <Processuais
         processuaisValues={Contracts.procedural}
@@ -63,26 +68,31 @@ export default function ContratoEdit({ Contracts, register, errors, getValues , 
         <Option
           label="Cliente"
           active={"cliente" === activeTable}
+          type="button"
           onClick={() => setActiveTable("cliente")}
         />
         <Option
           label="Contratos"
           active={"contratos" === activeTable}
+          type="button"
           onClick={() => setActiveTable("contratos")}
         />
         <Option
           label="Custas e Valores"
+          type="button"
           active={"custasValores" === activeTable}
           onClick={() => setActiveTable("custasValores")}
         />
         <Option
           label="Processuais"
           active={"processuais" === activeTable}
+          type="button"
           onClick={() => setActiveTable("processuais")}
         />
         <Option
           label="Processo"
           active={"processo" === activeTable}
+          type="button"
           onClick={() => setActiveTable("processo")}
         />
       </nav>

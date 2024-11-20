@@ -28,13 +28,13 @@ export default function Contrato() {
   // }, [item]);
   // console.log(item);
   const selectedItem = response[1];
-   const {
+  const {
     register,
     handleSubmit,
+    control,
     setValue,
     getValues,
     formState: { errors },
-    reset,
   } = useForm<ContractsContent>({
     defaultValues: {
       status: selectedItem.client.status,
@@ -43,64 +43,73 @@ export default function Contrato() {
       inclusionInLegalControl: selectedItem.client.inclusionInLegalControl,
       cnpj: selectedItem.client.cnpj,
       tenant: selectedItem.client.tenant,
-      supplier : selectedItem.contracts.supplier,
-      overdueAmount : selectedItem.contracts.overdueAmount,
-      
+      supplier: selectedItem.contracts.supplier,
+      overdueAmount: selectedItem.contracts.overdueAmount,
+      contractEnd: selectedItem.contracts.contractEnd,
+      fo: selectedItem.contracts.fo,
+      initialCourtCosts: selectedItem.costsAndValues.initialCourtCosts,
+      initialEnforcementAmount: selectedItem.costsAndValues.initialEnforcementAmount,
+      historicalAmountOrSentence: selectedItem.costsAndValues.historicalAmountOrSentence,
+      otherCourtCosts: selectedItem.costsAndValues.otherCourtCosts,
+      gcPaidCosts: selectedItem.costsAndValues.gcPaidCosts,
     },
     resolver: zodResolver(ContractsContent),
   });
   const onSubmit: SubmitHandler<ContractsContent> = (data) => {
-    console.log(data); 
+    console.log(errors)
+    console.log(data);
   };
-
 
   return (
     <main className=" flex-col  w-full h-screen-minus-80   pb-20 items-start bg-primary100 justify-items-center text-white">
       <Header />
-      <form  className="flex flex-col items-start w-11/12"     onSubmit={handleSubmit(onSubmit)}
+      <form
+        className="flex flex-col items-start w-11/12"
+        onSubmit={handleSubmit(onSubmit)}
       >
-
-      <div className="flex flex-col items-start w-full mt-5 mb-10">
-        <span className="flex flex-row items-start justify-start gap-2 w-full select-none">
-          <p
-            onClick={() => router.push("/home")}
-            className="text-white font-light text-sm cursor-pointer"
-          >
-            Home
-          </p>
-          <p className="text-gray400 font-light text-sm cursor-default">
-            {"/"}
-          </p>
-          <p className="text-gray400 font-light text-sm cursor-default">
-            Contrato
-          </p>
-        </span>
-        <nav className="flex flex-row items-center justify-between w-full mt-5">
-          <p className="text-white font-medium text-3xl ">
-            {selectedItem?.process.processNumber
-              ? `Contrato ${selectedItem.process.processNumber}`
-              : "Contrato não encontrado"}
-          </p>
-          <Button
-            title="Editar"
-            type="submit"
-            className="bg-blue200 w-36 h-10  "
-            loading={false}
+        <div className="flex flex-col items-start w-full mt-5 mb-10">
+          <span className="flex flex-row items-start justify-start gap-2 w-full select-none">
+            <p
+              onClick={() => router.push("/home")}
+              className="text-white font-light text-sm cursor-pointer"
+            >
+              Home
+            </p>
+            <p className="text-gray400 font-light text-sm cursor-default">
+              {"/"}
+            </p>
+            <p className="text-gray400 font-light text-sm cursor-default">
+              Contrato
+            </p>
+          </span>
+          <nav className="flex flex-row items-center justify-between w-full mt-5">
+            <p className="text-white font-medium text-3xl ">
+              {selectedItem?.process.processNumber
+                ? `Contrato ${selectedItem.process.processNumber}`
+                : "Contrato não encontrado"}
+            </p>
+            <Button
+              title="Editar"
+              type="submit"
+              className="bg-blue200 w-36 h-10  "
+              loading={false}
+            />
+          </nav>
+        </div>
+        {selectedItem ? (
+          // <ContratoView Contracts={selectedItem} />
+          <ContratoEdit
+            Contracts={selectedItem}
+            register={register}
+            control={control}
+            setValue={setValue}
+            getValues={getValues}
+            errors={errors}
           />
-        </nav>
-      </div>
-      {selectedItem ? (
-        // <ContratoView Contracts={selectedItem} />
-        <ContratoEdit Contracts={selectedItem} 
-        register={register}
-        setValue={setValue}
-    getValues={getValues}
-        errors={errors} />
-      ) : (
-        <>Dados do contrato não encontrado..</>
-      )}
-            </form>
-
+        ) : (
+          <>Dados do contrato não encontrado..</>
+        )}
+      </form>
     </main>
   );
 }
