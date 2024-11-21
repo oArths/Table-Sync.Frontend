@@ -32,16 +32,19 @@ interface IOption {
       {open && (
         <div
           className={`absolute flex flex-col top-full items-center justify-center py-1 z-10 w-full max-h-40 overflow-auto  mt-1 bg-primary300 rounded ${
-            open ? "animate-fadeInDown" : "animate-fadeOutUp"
-          }`}
+            open ? "animate-fadeInDown" : "animate-fadeOutUp" 
+          }
+           ${options.length > 5 && 'py-3'}
+          `}
         >
           {options.map((value, index) => {
             return (
               <p
                 key={index}
                 onClick={() => onSelect(value)}
-                className="flex flex-row items-center px-2 first:mt-2 last:mb-2  font-regular text-base text-gray500 justify-between w-11/12 rounded-sm hover:bg-primary400 cursor-pointer select-none"
-              >
+                className={`flex flex-row items-center px-2 font-regular text-base text-gray500 justify-between w-11/12 rounded-sm hover:bg-primary400 cursor-pointer select-none ${
+                  index === 0 ? "mt-2" : "" // Adiciona margem no primeiro item
+                }`}              >
                 {value}
                 {value === select && (
                   <I.Check

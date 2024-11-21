@@ -12,7 +12,7 @@ import { Root } from "@/app/data/response.d";
 import response from "../../../data/response.json";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ContractsContent } from "@/app/template/card/edit/cliente/zodValidation";
+import { ContractsContentSchema } from "@/app/template/card/edit/cliente/zodValidation";
 
 export default function Contrato() {
   const params = useParams<{ id: string }>();
@@ -28,6 +28,7 @@ export default function Contrato() {
   // }, [item]);
   // console.log(item);
   const selectedItem = response[1];
+  const [editing, setEditing] = useState(false);
   const {
     register,
     handleSubmit,
@@ -35,43 +36,53 @@ export default function Contrato() {
     setValue,
     getValues,
     formState: { errors },
-  } = useForm<ContractsContent>({
+  } = useForm<ContractsContentSchema>({
     defaultValues: {
-      status: selectedItem.client.status,
-      clientNumber: selectedItem.client.clientNumber.toString(),
-      kaDate: selectedItem.client.kaDate,
-      inclusionInLegalControl: selectedItem.client.inclusionInLegalControl,
-      cnpj: selectedItem.client.cnpj,
-      tenant: selectedItem.client.tenant,
-      supplier: selectedItem.contracts.supplier,
-      overdueAmount: selectedItem.contracts.overdueAmount,
-      contractEnd: selectedItem.contracts.contractEnd,
-      fo: selectedItem.contracts.fo,
-      initialCourtCosts: selectedItem.costsAndValues.initialCourtCosts,
-      initialEnforcementAmount: selectedItem.costsAndValues.initialEnforcementAmount,
-      historicalAmountOrSentence: selectedItem.costsAndValues.historicalAmountOrSentence,
-      otherCourtCosts: selectedItem.costsAndValues.otherCourtCosts,
-      gcPaidCosts: selectedItem.costsAndValues.gcPaidCosts,
-      judicialRecovery: selectedItem.procedural.judicialRecovery,
-      sentence: selectedItem.procedural.sentence.sentence,
-      sentenceType: selectedItem.procedural.sentence.sentenceType,
-      proceduralSituation: selectedItem.procedural.sentence.proceduralSituation,
-      amountReceivedPaidToGrenke: selectedItem.procedural.amountReceivedPaidToGrenke,
-      amountPaidByGrenke: selectedItem.procedural.amountPaidByGrenke,
-      phase: selectedItem.procedural.phase,
-      frContact: selectedItem.procedural.frContact,
-      processNumber: selectedItem.process.processNumber,
-      newProcessNumber: selectedItem.process.newProcessNumber,
-      agreementMade: selectedItem.process.agreementMade,
-      causeValue: selectedItem.process.causeValue,
-      lastMovement: selectedItem.process.lastMovement,
-      citation: selectedItem.process.citation,
-      frLastActionOrMeasures: selectedItem.process.frLastActionOrMeasures,
+      client: {
+        tenant: selectedItem.client.tenant,
+        cnpj: selectedItem.client.cnpj,
+        clientNumber: selectedItem.client.clientNumber.toString(),
+        status: selectedItem.client.status,
+        inclusionInLegalControl: selectedItem.client.inclusionInLegalControl,
+        kaDate: selectedItem.client.kaDate,
+      },
+      contracts: {
+        supplier: selectedItem.contracts.supplier,
+        overdueAmount: selectedItem.contracts.overdueAmount,
+        fo: selectedItem.contracts.fo,
+        contractEnd: selectedItem.contracts.contractEnd,
+      },
+      costsAndValues: {
+        initialCourtCosts: selectedItem.costsAndValues.initialCourtCosts,
+        initialEnforcementAmount: selectedItem.costsAndValues.initialEnforcementAmount,
+        historicalAmountOrSentence: selectedItem.costsAndValues.historicalAmountOrSentence,
+        otherCourtCosts: selectedItem.costsAndValues.otherCourtCosts,
+        gcPaidCosts: selectedItem.costsAndValues.gcPaidCosts,
+      },
+      procedural: {
+        judicialRecovery: selectedItem.procedural.judicialRecovery,
+          sentence: selectedItem.procedural.sentence.sentence,
+          sentenceType: selectedItem.procedural.sentence.sentenceType,
+          proceduralSituation: selectedItem.procedural.sentence.proceduralSituation,
+        amountReceivedPaidToGrenke: selectedItem.procedural.amountReceivedPaidToGrenke,
+        amountPaidByGrenke: selectedItem.procedural.amountPaidByGrenke,
+        phase: selectedItem.procedural.phase,
+        frContact: selectedItem.procedural.frContact,
+      },
+      process: {
+        processNumber: selectedItem.process.processNumber,
+        newProcessNumber: selectedItem.process.newProcessNumber,
+        agreementMade: selectedItem.process.agreementMade,
+        causeValue: selectedItem.process.causeValue,
+        lastMovement: selectedItem.process.lastMovement,
+        citation: selectedItem.process.citation,
+        frLastActionOrMeasures: selectedItem.process.frLastActionOrMeasures,
+      },
     },
-    resolver: zodResolver(ContractsContent),
+    resolver: zodResolver(ContractsContentSchema),
   });
-  const onSubmit: SubmitHandler<ContractsContent> = (data) => {
-    console.log(errors)
+  const onSubmit: SubmitHandler<ContractsContentSchema> = (data) => {
+    console.log(errors);
     console.log(data);
   };
 
@@ -103,16 +114,26 @@ export default function Contrato() {
                 ? `Contrato ${selectedItem.process.processNumber}`
                 : "Contrato não encontrado"}
             </p>
-            <Button
-              title="Editar"
-              type="submit"
-              className="bg-blue200 w-36 h-10  "
-              loading={false}
-            />
+            {editing ? (
+              <Button
+                title="Salvar"
+                type="submit"
+                className="bg-green200/70 w-36 h-10  "
+                loading={false}
+              />
+            ) : (
+              <Button
+                title="Editar"
+                type="button"
+                onClick={() => setEditing(true)}
+                className="bg-blue200 w-36 h-10  "
+                loading={false}
+              />
+            )}
           </nav>
         </div>
-        {selectedItem ? (
-          // <ContratoView Contracts={selectedItem} />
+
+        {editing ? (
           <ContratoEdit
             Contracts={selectedItem}
             register={register}
@@ -122,8 +143,10 @@ export default function Contrato() {
             errors={errors}
           />
         ) : (
-          <>Dados do contrato não encontrado..</>
+          <ContratoView Contracts={selectedItem} />
         )}
+
+        {!selectedItem && <>Dados do contrato não encontrado..</>}
       </form>
     </main>
   );

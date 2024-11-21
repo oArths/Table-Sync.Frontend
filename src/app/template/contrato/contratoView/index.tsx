@@ -24,7 +24,7 @@ export default function ContratoView({ Contracts }: IContratoView) {
   };
 
   return (
-    <div className="w-11/12 h-auto border border-solid border-primary300 bg-primary200 rounded  flex flex-col items-center justify-center">
+    <div className="w-full h-auto border border-solid border-primary300 bg-primary200 rounded  flex flex-col items-center justify-center">
       <nav className="flex flex-row items-center justify-around  w-full h-auto">
         <Option
           label="Cliente"

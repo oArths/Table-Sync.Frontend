@@ -61,11 +61,11 @@
       "contractEnd": "15/08/2027"
     },
     "costsAndValues": {
-      "initialCourtCosts": " 12.500,00",
+      "initialCourtCosts": "12.500,00",
       "initialEnforcementAmount": " 268.526,00",
-      "historicalAmountOrSentence": " 12.500,00",
-      "otherCourtCosts": " 9.500,00",
-      "gcPaidCosts": " 9.500,00"
+      "historicalAmountOrSentence": "12.500,00",
+      "otherCourtCosts": "9.500,00",
+      "gcPaidCosts": "9.500,00"
     },
     "procedural": {
       "judicialRecovery": "n/a",
@@ -74,8 +74,8 @@
         "sentenceType": "Improcedente",
         "proceduralSituation": "Arquivado"
       },
-      "amountReceivedPaidToGrenke": " 9.500,00",
-      "amountPaidByGrenke": " 9.500,00",
+      "amountReceivedPaidToGrenke": "9.500,00",
+      "amountPaidByGrenke": "9.500,00",
       "phase": "Arquivado",
       "frContact": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     },
@@ -83,7 +83,7 @@
       "processNumber": "0012857-36.2021.8.26.0554",
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Sim",
-      "causeValue": " 9.500,00",
+      "causeValue": "9.500,00",
       "lastMovement": "10/11/2024",
       "citation": "Não",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
@@ -107,7 +107,7 @@
     },
     "costsAndValues": {
       "initialCourtCosts": " 12.500,00",
-      "initialEnforcementAmount": " 268.526,00",
+      "initialEnforcementAmount": "268.526,00",
       "historicalAmountOrSentence": " 12.500,00",
       "otherCourtCosts": " 9.500,00",
       "gcPaidCosts": " 9.500,00"

@@ -6,11 +6,12 @@ import Processuais from "../../card/edit/processuais";
 import { RootObject } from "@/app/data/response.d";
 import Option from "@/app/components/option";
 import { useState } from "react";
+import { FieldErrors } from "react-hook-form/dist/types/errors";
 
 interface IContratoView {
   Contracts: RootObject;
   register: any;
-  errors: any;
+  errors: FieldErrors;
   getValues: any;
   setValue: any;
   control: any;
@@ -48,22 +49,27 @@ export default function ContratoEdit({
     custasValores: <CustaValores control={control} errors={errors} />,
     processuais: (
       <Processuais
-      register={register}
-      errors={errors}
-      control={control}
-      setValue={setValue}
-      getValues={getValues}
+        register={register}
+        errors={errors}
+        control={control}
+        setValue={setValue}
+        getValues={getValues}
       />
     ),
     processo: (
       <Processo
-      register={register}
-      errors={errors}
-      control={control}
-      setValue={setValue}
-      getValues={getValues}
+        // setError={() => setError('processo')}
+        register={register}
+        errors={errors}
+        control={control}
+        setValue={setValue}
+        getValues={getValues}
       />
     ),
+  };
+  console.log(errors);
+  const hasErrorsInGroup = (group: string) => {
+    return Object.keys(errors).some((key) => key.startsWith(group));
   };
 
   return (
@@ -72,30 +78,35 @@ export default function ContratoEdit({
         <Option
           label="Cliente"
           active={"cliente" === activeTable}
+          hasError={hasErrorsInGroup("client")} 
           type="button"
           onClick={() => setActiveTable("cliente")}
         />
         <Option
           label="Contratos"
           active={"contratos" === activeTable}
+          hasError={hasErrorsInGroup("contracts")}
           type="button"
           onClick={() => setActiveTable("contratos")}
         />
         <Option
           label="Custas e Valores"
-          type="button"
           active={"custasValores" === activeTable}
+          hasError={hasErrorsInGroup("costsAndValues")}
+          type="button"
           onClick={() => setActiveTable("custasValores")}
         />
         <Option
           label="Processuais"
           active={"processuais" === activeTable}
+          hasError={hasErrorsInGroup("procedural")}
           type="button"
           onClick={() => setActiveTable("processuais")}
         />
         <Option
           label="Processo"
           active={"processo" === activeTable}
+          hasError={hasErrorsInGroup("process")}
           type="button"
           onClick={() => setActiveTable("processo")}
         />
