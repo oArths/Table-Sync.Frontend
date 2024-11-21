@@ -45,13 +45,13 @@ export default function Contrato({
       <InputEdit
         label="Fornecedor"
         id="supplier"
-        errorsType={errors.supplier}
-        errorsMessage={errors.supplier?.message}
-        {...register("supplier")}
+        errorsType={errors.contracts.supplier}
+        errorsMessage={errors.contracts.supplier?.message}
+        {...register("contracts.supplier")}
       />
 
       <Controller
-        name="overdueAmount"
+        name="contracts.overdueAmount"
         control={control}
         render={({ field }) => (
           <InputEdit
@@ -60,8 +60,8 @@ export default function Contrato({
             onChange={(e) =>
               field.onChange(e.target.value.replace("R$", "").trim())
             }
-            errorsType={errors.overdueAmount}
-            errorsMessage={errors.overdueAmount?.message}
+            errorsType={errors.contracts.overdueAmount}
+            errorsMessage={errors.contracts.overdueAmount?.message}
           />
         )}
       />
@@ -69,24 +69,24 @@ export default function Contrato({
         label="FO"
         open={optionState}
         onClick={() => (setOptionState(!optionState), console.log("open"))}
-        select={getValues("fo")}
+        select={getValues("contracts.fo")}
         onSelect={(selected) => (
-          setValue("fo", selected), setOptionState(false)
+          setValue("contracts.fo", selected), setOptionState(false)
         )}
         options={option}
-        ref={register("fo").ref}
+        ref={register("contracts.fo").ref}
       />
 
       <Controller
-        name="contractEnd"
+        name="contracts.contractEnd"
         control={control}
         render={({ field }) => (
           <InputEdit
             label="Fim do contrato"
             value={field.value ?? ""}
             onChange={field.onChange}
-            errorsType={errors.contractEnd}
-            errorsMessage={errors.contractEnd?.message}
+            errorsType={errors.contracts.contractEnd}
+            errorsMessage={errors.contracts.contractEnd?.message}
           />
         )}
       />

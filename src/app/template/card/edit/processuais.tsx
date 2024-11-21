@@ -33,48 +33,48 @@ export default function Processuais({
           label="Recuperação judicial"
           open={open === "judicialRecovery"}
           onClick={() => seOpen("judicialRecovery")}
-          select={getValues("judicialRecovery")}
+          select={getValues("procedural.judicialRecovery")}
           onSelect={(selected) => (
-            setValue("judicialRecovery", selected), seOpen("")
+            setValue("procedural.judicialRecovery", selected), seOpen("")
           )}
           options={judicialRecovery}
-          ref={register("judicialRecovery").ref}
+          ref={register("procedural.judicialRecovery").ref}
         />
         <Options
           label="Sentença"
           open={open === "sentence"}
           onClick={() => seOpen("sentence")}
-          select={getValues("sentence")}
-          onSelect={(selected) => (setValue("sentence", selected), seOpen(""))}
+          select={getValues("procedural.sentence")}
+          onSelect={(selected) => (setValue("procedural.sentence", selected), seOpen(""))}
           options={sentence}
-          ref={register("sentence").ref}
+          ref={register("procedural.sentence").ref}
         />
         <Options
           label="Tipo de Sentença"
           open={open === "sentenceType"}
           onClick={() => seOpen("sentenceType")}
-          select={getValues("sentenceType")}
+          select={getValues("procedural.sentenceType")}
           onSelect={(selected) => (
-            setValue("sentenceType", selected), seOpen("")
+            setValue("procedural.sentenceType", selected), seOpen("")
           )}
           options={sentenceType}
-          ref={register("sentenceType").ref}
+          ref={register("procedural.sentenceType").ref}
         />
         <Options
           label=" Situação Processual  "
           open={open === "proceduralSituation"}
           onClick={() => seOpen("proceduralSituation")}
-          select={getValues("proceduralSituation")}
+          select={getValues("procedural.proceduralSituation")}
           onSelect={(selected) => (
-            setValue("proceduralSituation", selected), seOpen("")
+            setValue("procedural.proceduralSituation", selected), seOpen("")
           )}
           options={proceduralSituation}
-          ref={register("proceduralSituation").ref}
+          ref={register("procedural.proceduralSituation").ref}
         />
       </div>
       <div className="flex flex-row items-start gap-5 justify-between w-full">
         <Controller
-          name="amountReceivedPaidToGrenke"
+          name="procedural.amountReceivedPaidToGrenke"
           control={control}
           render={({ field }) => (
             <InputEdit
@@ -83,13 +83,13 @@ export default function Processuais({
               onChange={(e) =>
                 field.onChange(e.target.value.replace("R$", "").trim())
               }
-              errorsType={errors.amountReceivedPaidToGrenke}
-              errorsMessage={errors.amountReceivedPaidToGrenke?.message}
+              errorsType={errors.procedural.amountReceivedPaidToGrenke}
+              errorsMessage={errors.procedural.amountReceivedPaidToGrenke?.message}
             />
           )}
         />
         <Controller
-          name="amountPaidByGrenke"
+          name="procedural.amountPaidByGrenke"
           control={control}
           render={({ field }) => (
             <InputEdit
@@ -98,8 +98,8 @@ export default function Processuais({
               onChange={(e) =>
                 field.onChange(e.target.value.replace("R$", "").trim())
               }
-              errorsType={errors.amountPaidByGrenke}
-              errorsMessage={errors.amountPaidByGrenke?.message}
+              errorsType={errors.procedural.amountPaidByGrenke}
+              errorsMessage={errors.procedural.amountPaidByGrenke?.message}
             />
           )}
         />
@@ -107,10 +107,10 @@ export default function Processuais({
           label="Fase"
           open={open === "phase"}
           onClick={() => seOpen("phase")}
-          select={getValues("phase")}
-          onSelect={(selected) => (setValue("phase", selected), seOpen(""))}
+          select={getValues("procedural.phase")}
+          onSelect={(selected) => (setValue("procedural.phase", selected), seOpen(""))}
           options={phase}
-          ref={register("phase").ref}
+          ref={register("procedural.phase").ref}
         />
       </div>
       <InputTextArea
@@ -118,9 +118,9 @@ export default function Processuais({
         type="tex"
         className="h-32  flex items-start justify-start text-start "
         id="frContact"
-        errorsType={errors.frContact}
-        errorsMessage={errors.frContact?.message}
-        {...register("frContact")}
+        errorsType={errors.procedural.frContact}
+        errorsMessage={errors.procedural.frContact?.message}
+        {...register("procedural.frContact")}
       />
     </aside>
   );

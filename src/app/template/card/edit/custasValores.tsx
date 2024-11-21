@@ -13,7 +13,7 @@ export default function CustaValores({
   return (
     <aside className=" flex flex-col items-center justify-around gap-y-5  pt-8 pb-20 w-10/12 h-full">
       <Controller
-        name="initialCourtCosts"
+        name="costsAndValues.initialCourtCosts"
         control={control}
         render={({ field }) => (
           <InputEdit
@@ -22,13 +22,13 @@ export default function CustaValores({
             onChange={(e) =>
               field.onChange(e.target.value.replace("R$", "").trim())
             }
-            errorsType={errors.initialCourtCosts}
-            errorsMessage={errors.initialCourtCosts?.message}
+            errorsType={errors.costsAndValues.initialCourtCosts}
+            errorsMessage={errors.costsAndValues.initialCourtCosts?.message}
           />
         )}
       />
       <Controller
-        name="initialEnforcementAmount"
+        name="costsAndValues.initialEnforcementAmount"
         control={control}
         render={({ field }) => (
           <InputEdit
@@ -37,13 +37,13 @@ export default function CustaValores({
             onChange={(e) =>
               field.onChange(e.target.value.replace("R$", "").trim())
             }
-            errorsType={errors.initialEnforcementAmount}
-            errorsMessage={errors.initialEnforcementAmount?.message}
+            errorsType={errors.costsAndValues.initialEnforcementAmount}
+            errorsMessage={errors.costsAndValues.initialEnforcementAmount?.message}
           />
         )}
       />
       <Controller
-        name="historicalAmountOrSentence"
+        name="costsAndValues.historicalAmountOrSentence"
         control={control}
         render={({ field }) => (
           <InputEdit
@@ -52,15 +52,15 @@ export default function CustaValores({
             onChange={(e) =>
               field.onChange(e.target.value.replace("R$", "").trim())
             }
-            errorsType={errors.historicalAmountOrSentence}
-            errorsMessage={errors.historicalAmountOrSentence?.message}
+            errorsType={errors.costsAndValues.historicalAmountOrSentence}
+            errorsMessage={errors.costsAndValues.historicalAmountOrSentence?.message}
           />
         )}
       />
 
       <div className="flex flex-row items-center gap-5 justify-between w-full">
         <Controller
-          name="otherCourtCosts"
+          name="costsAndValues.otherCourtCosts"
           control={control}
           render={({ field }) => (
             <InputEdit
@@ -69,14 +69,14 @@ export default function CustaValores({
               onChange={(e) =>
                 field.onChange(e.target.value.replace("R$", "").trim())
               }
-              errorsType={errors.otherCourtCosts}
-              errorsMessage={errors.otherCourtCosts?.message}
+              errorsType={errors.costsAndValues.otherCourtCosts}
+              errorsMessage={errors.costsAndValues.otherCourtCosts?.message}
             />
           )}
         />
 
         <Controller
-          name="gcPaidCosts"
+          name="costsAndValues.gcPaidCosts"
           control={control}
           render={({ field }) => (
             <InputEdit
@@ -85,8 +85,8 @@ export default function CustaValores({
               onChange={(e) =>
                 field.onChange(e.target.value.replace("R$", "").trim())
               }
-              errorsType={errors.gcPaidCosts}
-              errorsMessage={errors.gcPaidCosts?.message}
+              errorsType={errors.costsAndValues.gcPaidCosts}
+              errorsMessage={errors.costsAndValues.gcPaidCosts?.message}
             />
           )}
         />

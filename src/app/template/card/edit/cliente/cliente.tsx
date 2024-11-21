@@ -29,10 +29,10 @@ export default function Cliente({
         id="tenant"
         errorsType={errors.tenant}
         errorsMessage={errors.tenant?.message}
-        {...register("tenant")}
+        {...register("client.tenant")}
       />
      <Controller
-        name="cnpj"
+        name="client.cnpj"
         control={control}
         render={({ field }) => (
           <InputMask
@@ -51,18 +51,18 @@ export default function Cliente({
           label="Número do Cliente"
           errorsType={errors.clientNumber}
           errorsMessage={errors.clientNumber?.message}
-          {...register("clientNumber")}
+          {...register("client.clientNumber")}
         />
         <Options
           label="Status"
           open={optionState}
           onClick={() => (setOptionState(!optionState), console.log("open"))}
-          select={getValues("status")}
+          select={getValues("client.status")}
           onSelect={(selected) => (
-            setValue("status", selected), setOptionState(false)
+            setValue("client.status", selected), setOptionState(false)
           )}
           options={Option}
-          ref={register("status").ref}
+          ref={register("client.status").ref}
         />
       </div>
       <div className="flex flex-row items-center gap-5 justify-between w-full">
@@ -71,14 +71,14 @@ export default function Cliente({
           id="inclusionInLegalControl"
           errorsType={errors.inclusionInLegalControl}
           errorsMessage={errors.inclusionInLegalControl?.message}
-          {...register("inclusionInLegalControl")}
+          {...register("client.inclusionInLegalControl")}
         />
         <InputEdit
           label="Data KA"
           id="kaDate"
           errorsType={errors.kaDate}
           errorsMessage={errors.kaDate?.message}
-          {...register("kaDate")}
+          {...register("client.kaDate")}
         />
       </div>
     </aside>

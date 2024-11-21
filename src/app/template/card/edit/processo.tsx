@@ -26,7 +26,7 @@ export default function Processo({
     <aside className=" flex flex-col items-center justify-around gap-y-5  pt-8 pb-20 w-10/12 h-full">
       <div className="flex flex-row items-start gap-5 justify-between w-full">
         <Controller
-          name="processNumber"
+          name="process.processNumber"
           control={control}
           render={({ field }) => (
             <InputMask
@@ -36,6 +36,9 @@ export default function Processo({
                 /\d/,
                 /\d/,
                 /\d/,
+                /\d/,
+                /\d/,
+                /\d/,
                 "-",
                 /\d/,
                 /\d/,
@@ -49,7 +52,7 @@ export default function Processo({
                 ".",
                 /\d/,
                 /\d/,
-                "-",
+                ".",
                 /\d/,
                 /\d/,
                 /\d/,
@@ -63,7 +66,7 @@ export default function Processo({
           )}
         />
         <Controller
-          name="newProcessNumber"
+          name="process.newProcessNumber"
           control={control}
           render={({ field }) => (
             <InputMask
@@ -82,7 +85,6 @@ export default function Processo({
                 /\d/,
                 "-",
                 /\d/,
-                /\d/,
               ]}
               value={field.value || ""}
               onChange={field.onChange}
@@ -100,12 +102,12 @@ export default function Processo({
             setValue("agreementMade", selected), seOpen("")
           )}
           options={agreementMade}
-          ref={register("agreementMade").ref}
+          ref={register("process.agreementMade").ref}
         />
       </div>
       <div className="flex flex-row items-start gap-5 justify-between w-full">
         <Controller
-          name="causeValue"
+          name="process.causeValue"
           control={control}
           render={({ field }) => (
             <InputEdit
@@ -125,16 +127,16 @@ export default function Processo({
           id="lastMovement"
           errorsType={errors.lastMovement}
           errorsMessage={errors.lastMovement?.message}
-          {...register("lastMovement")}
+          {...register("process.lastMovement")}
         />
         <Options
           label="Citação"
           open={open === "citation"}
           onClick={() => seOpen("citation")}
-          select={getValues("citation")}
-          onSelect={(selected) => (setValue("citation", selected), seOpen(""))}
+          select={getValues("process.citation")}
+          onSelect={(selected) => (setValue("process.citation", selected), seOpen(""))}
           options={citation}
-          ref={register("citation").ref}
+          ref={register("process.citation").ref}
         />
       </div>
       <InputTextArea
@@ -144,7 +146,7 @@ export default function Processo({
         id="frLastActionOrMeasures"
         errorsType={errors.frLastActionOrMeasures}
         errorsMessage={errors.frLastActionOrMeasures?.message}
-        {...register("frLastActionOrMeasures")}
+        {...register("process.frLastActionOrMeasures")}
       />
     </aside>
   );
