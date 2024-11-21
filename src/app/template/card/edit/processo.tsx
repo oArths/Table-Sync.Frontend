@@ -53,15 +53,15 @@ export default function Processo({
                 /\d/,
                 /\d/,
                 ".",
-                /\d/,
+              /\d/,
                 /\d/,
                 /\d/,
                 /\d/,
               ]}
               value={field.value || ""}
               onChange={field.onChange}
-              errorsType={errors.processNumber}
-              errorsMessage={errors.processNumber?.message}
+              errorsType={errors.process?.processNumber}
+              errorsMessage={errors.process?.processNumber?.message}
             />
           )}
         />
@@ -88,8 +88,8 @@ export default function Processo({
               ]}
               value={field.value || ""}
               onChange={field.onChange}
-              errorsType={errors.newProcessNumber}
-              errorsMessage={errors.newProcessNumber?.message}
+              errorsType={errors.process?.newProcessNumber}
+              errorsMessage={errors.process?.newProcessNumber?.message}
             />
           )}
         />
@@ -97,9 +97,9 @@ export default function Processo({
           label="Acordo Realizado"
           open={open === "agreementMade"}
           onClick={() => seOpen("agreementMade")}
-          select={getValues("agreementMade")}
+          select={getValues("process.agreementMade")}
           onSelect={(selected) => (
-            setValue("agreementMade", selected), seOpen("")
+            setValue("process.agreementMade", selected), seOpen("")
           )}
           options={agreementMade}
           ref={register("process.agreementMade").ref}
@@ -116,8 +116,8 @@ export default function Processo({
               onChange={(e) =>
                 field.onChange(e.target.value.replace("R$", "").trim())
               }
-              errorsType={errors.causeValue}
-              errorsMessage={errors.causeValue?.message}
+              errorsType={errors.process?.causeValue}
+              errorsMessage={errors.process?.causeValue?.message}
             />
           )}
         />
@@ -125,8 +125,8 @@ export default function Processo({
         <InputEdit
           label="Última movimentação"
           id="lastMovement"
-          errorsType={errors.lastMovement}
-          errorsMessage={errors.lastMovement?.message}
+          errorsType={errors.process?.lastMovement}
+          errorsMessage={errors.process?.lastMovement?.message}
           {...register("process.lastMovement")}
         />
         <Options
@@ -144,8 +144,8 @@ export default function Processo({
         type="tex"
         className="h-32  flex items-start justify-start text-start "
         id="frLastActionOrMeasures"
-        errorsType={errors.frLastActionOrMeasures}
-        errorsMessage={errors.frLastActionOrMeasures?.message}
+        errorsType={errors.process?.frLastActionOrMeasures}
+        errorsMessage={errors.process?.frLastActionOrMeasures?.message}
         {...register("process.frLastActionOrMeasures")}
       />
     </aside>

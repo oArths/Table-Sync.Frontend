@@ -45,8 +45,8 @@ export default function Contrato({
       <InputEdit
         label="Fornecedor"
         id="supplier"
-        errorsType={errors.contracts.supplier}
-        errorsMessage={errors.contracts.supplier?.message}
+        errorsType={errors.contracts?.supplier}
+        errorsMessage={errors.contracts?.supplier?.message}
         {...register("contracts.supplier")}
       />
 
@@ -60,8 +60,8 @@ export default function Contrato({
             onChange={(e) =>
               field.onChange(e.target.value.replace("R$", "").trim())
             }
-            errorsType={errors.contracts.overdueAmount}
-            errorsMessage={errors.contracts.overdueAmount?.message}
+            errorsType={errors.contracts?.overdueAmount}
+            errorsMessage={errors.contracts?.overdueAmount?.message}
           />
         )}
       />
@@ -85,8 +85,8 @@ export default function Contrato({
             label="Fim do contrato"
             value={field.value ?? ""}
             onChange={field.onChange}
-            errorsType={errors.contracts.contractEnd}
-            errorsMessage={errors.contracts.contractEnd?.message}
+            errorsType={errors.contracts?.contractEnd}
+            errorsMessage={errors.contracts?.contractEnd?.message}
           />
         )}
       />

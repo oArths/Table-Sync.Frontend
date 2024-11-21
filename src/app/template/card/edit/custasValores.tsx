@@ -22,8 +22,8 @@ export default function CustaValores({
             onChange={(e) =>
               field.onChange(e.target.value.replace("R$", "").trim())
             }
-            errorsType={errors.costsAndValues.initialCourtCosts}
-            errorsMessage={errors.costsAndValues.initialCourtCosts?.message}
+            errorsType={errors.costsAndValues?.initialCourtCosts}
+            errorsMessage={errors.costsAndValues?.initialCourtCosts?.message}
           />
         )}
       />
@@ -37,8 +37,8 @@ export default function CustaValores({
             onChange={(e) =>
               field.onChange(e.target.value.replace("R$", "").trim())
             }
-            errorsType={errors.costsAndValues.initialEnforcementAmount}
-            errorsMessage={errors.costsAndValues.initialEnforcementAmount?.message}
+            errorsType={errors.costsAndValues?.initialEnforcementAmount}
+            errorsMessage={errors.costsAndValues?.initialEnforcementAmount?.message}
           />
         )}
       />
@@ -52,8 +52,8 @@ export default function CustaValores({
             onChange={(e) =>
               field.onChange(e.target.value.replace("R$", "").trim())
             }
-            errorsType={errors.costsAndValues.historicalAmountOrSentence}
-            errorsMessage={errors.costsAndValues.historicalAmountOrSentence?.message}
+            errorsType={errors.costsAndValues?.historicalAmountOrSentence}
+            errorsMessage={errors.costsAndValues?.historicalAmountOrSentence?.message}
           />
         )}
       />
@@ -69,8 +69,8 @@ export default function CustaValores({
               onChange={(e) =>
                 field.onChange(e.target.value.replace("R$", "").trim())
               }
-              errorsType={errors.costsAndValues.otherCourtCosts}
-              errorsMessage={errors.costsAndValues.otherCourtCosts?.message}
+              errorsType={errors.costsAndValues?.otherCourtCosts}
+              errorsMessage={errors.costsAndValues?.otherCourtCosts?.message}
             />
           )}
         />
@@ -85,8 +85,8 @@ export default function CustaValores({
               onChange={(e) =>
                 field.onChange(e.target.value.replace("R$", "").trim())
               }
-              errorsType={errors.costsAndValues.gcPaidCosts}
-              errorsMessage={errors.costsAndValues.gcPaidCosts?.message}
+              errorsType={errors.costsAndValues?.gcPaidCosts}
+              errorsMessage={errors.costsAndValues?.gcPaidCosts?.message}
             />
           )}
         />

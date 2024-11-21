@@ -83,8 +83,8 @@ export default function Processuais({
               onChange={(e) =>
                 field.onChange(e.target.value.replace("R$", "").trim())
               }
-              errorsType={errors.procedural.amountReceivedPaidToGrenke}
-              errorsMessage={errors.procedural.amountReceivedPaidToGrenke?.message}
+              errorsType={errors.procedural?.amountReceivedPaidToGrenke}
+              errorsMessage={errors.procedural?.amountReceivedPaidToGrenke?.message}
             />
           )}
         />
@@ -98,8 +98,8 @@ export default function Processuais({
               onChange={(e) =>
                 field.onChange(e.target.value.replace("R$", "").trim())
               }
-              errorsType={errors.procedural.amountPaidByGrenke}
-              errorsMessage={errors.procedural.amountPaidByGrenke?.message}
+              errorsType={errors.procedural?.amountPaidByGrenke}
+              errorsMessage={errors.procedural?.amountPaidByGrenke?.message}
             />
           )}
         />
@@ -118,10 +118,10 @@ export default function Processuais({
         type="tex"
         className="h-32  flex items-start justify-start text-start "
         id="frContact"
-        errorsType={errors.procedural.frContact}
-        errorsMessage={errors.procedural.frContact?.message}
+        errorsType={errors.procedural?.frContact}
+        errorsMessage={errors.procedural?.frContact?.message}
         {...register("procedural.frContact")}
-      />
+      /> 
     </aside>
   );
 }

@@ -6,7 +6,7 @@ import Options from "@/app/components/dropdown/option";
 import { useState } from "react";
 interface ICliente {
   register: any;
-  errors: any;
+  errors: any | undefined;
   getValues: any;
   setValue: any;
   control: any;
@@ -27,8 +27,8 @@ export default function Cliente({
       <InputEdit
         label="Locatatio"
         id="tenant"
-        errorsType={errors.tenant}
-        errorsMessage={errors.tenant?.message}
+        errorsType={errors.client?.tenant}
+        errorsMessage={errors.client?.tenant?.message}
         {...register("client.tenant")}
       />
      <Controller
@@ -40,8 +40,8 @@ export default function Cliente({
             mask={[/\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '/', /\d/, /\d/, /\d/,/\d/, '-', /\d/, /\d/]}
             value={field.value || ""}
             onChange={field.onChange} 
-            errorsType={errors.cnpj}
-            errorsMessage={errors.cnpj?.message}
+            errorsType={errors.client?.cnpj}
+            errorsMessage={errors.client?.cnpj?.message}
           />
         )}
       />
@@ -49,8 +49,8 @@ export default function Cliente({
         <InputEdit
           id="clientNumber"
           label="Número do Cliente"
-          errorsType={errors.clientNumber}
-          errorsMessage={errors.clientNumber?.message}
+          errorsType={errors.client?.clientNumber}
+          errorsMessage={errors.client?.clientNumber?.message}
           {...register("client.clientNumber")}
         />
         <Options
@@ -69,15 +69,15 @@ export default function Cliente({
         <InputEdit
           label="Inclusão na Legal Control"
           id="inclusionInLegalControl"
-          errorsType={errors.inclusionInLegalControl}
-          errorsMessage={errors.inclusionInLegalControl?.message}
+          errorsType={errors.client?.inclusionInLegalControl}
+          errorsMessage={errors.client?.inclusionInLegalControl?.message}
           {...register("client.inclusionInLegalControl")}
         />
         <InputEdit
           label="Data KA"
           id="kaDate"
-          errorsType={errors.kaDate}
-          errorsMessage={errors.kaDate?.message}
+          errorsType={errors.client?.kaDate}
+          errorsMessage={errors.client?.kaDate?.message}
           {...register("client.kaDate")}
         />
       </div>
