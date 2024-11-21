@@ -58,7 +58,6 @@ export default function ContratoEdit({
     ),
     processo: (
       <Processo
-        // setError={() => setError('processo')}
         register={register}
         errors={errors}
         control={control}

@@ -62,7 +62,7 @@
     },
     "costsAndValues": {
       "initialCourtCosts": "12.500,00",
-      "initialEnforcementAmount": " 268.526,00",
+      "initialEnforcementAmount": "268.526,00",
       "historicalAmountOrSentence": "12.500,00",
       "otherCourtCosts": "9.500,00",
       "gcPaidCosts": "9.500,00"
