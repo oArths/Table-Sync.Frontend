@@ -8,12 +8,12 @@ interface IInputMaskProps {
   errorsType?: any;
   errorsMessage?: string;
   mask: any;
+  pipe?: any;
 }
 
-const InputMask: React.FC<IInputMaskProps> = ({ value, onChange, label, errorsType, errorsMessage, mask }) => {
+const InputMask: React.FC<IInputMaskProps> = ({ value, onChange, label, errorsType, errorsMessage, mask, pipe }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let inputValue = e.target.value;
-
     inputValue = inputValue.replace(/\D/g, ""); 
       onChange({ target: { value: inputValue } } as React.ChangeEvent<HTMLInputElement>);
   };
@@ -24,6 +24,7 @@ const InputMask: React.FC<IInputMaskProps> = ({ value, onChange, label, errorsTy
       <MaskedInput
         mask={mask} 
         value={value}
+        pipe={pipe}
         onChange={handleChange}
         className="rounded w-full p-2 text-sm border border-solid border-gray200 focus:ease-in focus:border-blue200 bg-primary200 transition-colors duration-300 focus:outline-none"
       />
