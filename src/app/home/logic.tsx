@@ -56,7 +56,6 @@ const useLogic = () => {
         item.lastMovement,
         item.contractEnd,
         item.phase,
-        item.cnpj,
       ].join(" ");
 
       return normalizeString(dataToSearch).includes(searchNormalize);
