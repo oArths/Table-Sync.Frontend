@@ -22,7 +22,10 @@ export default function Processo({ processValues }: IProcesso) {
         />
       </div>
       <div className="flex flex-row items-center gap-5 justify-between w-full">
-        <InputView label="Valor da Causa" value={processValues.causeValue} />
+        <InputView
+          label="Valor da Causa"
+          value={`R$ ${processValues.causeValue}`}
+        />
         <InputView
           label="Última movimentação"
           value={processValues.lastMovement}
@@ -31,7 +34,7 @@ export default function Processo({ processValues }: IProcesso) {
       </div>
       <InputView
         label="FR Último Andamento/Providências"
-        className="h-32 items-start justify-start text-start"  
+        className="h-32 items-start justify-start text-start"
         value={processValues.frLastActionOrMeasures}
       />
     </aside>

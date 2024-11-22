@@ -28,11 +28,12 @@ export default function Processuais({ processuaisValues }: IProcessuais) {
       <div className="flex flex-row items-center gap-5 justify-between w-full">
         <InputView
           label="Valor recebido (pago à Grenke)"
-          value={processuaisValues.amountReceivedPaidToGrenke}
+          value={`R$ ${processuaisValues.amountReceivedPaidToGrenke}`}
         />
         <InputView
           label="Valor pago pela Grenke"
-          value={processuaisValues.amountPaidByGrenke}
+          value={`R$ ${processuaisValues.amountPaidByGrenke}`}
+
         />
         <InputView label="Fase" value={processuaisValues.phase} />
       </div>

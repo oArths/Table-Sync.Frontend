@@ -9,24 +9,26 @@ export default function CustaValores({ CustaValoresValues }: ICustaValores) {
     <aside className=" flex flex-col items-center justify-around gap-y-5  pt-8 pb-20 w-10/12 h-full">
       <InputView
         label="Valor das custas iniciais"
-        value={CustaValoresValues.initialCourtCosts}
+        value={`R$ ${CustaValoresValues.initialCourtCosts}`}
+
       />
       <InputView
         label="Valor inicial do cumprimento "
-        value={CustaValoresValues.initialEnforcementAmount}
+        value={`R$ ${CustaValoresValues.initialEnforcementAmount}`}
+        
       />
       <InputView
         label="Valor histórico/Sentença"
-        value={CustaValoresValues.historicalAmountOrSentence}
-      />
+        value={`R$ ${CustaValoresValues.historicalAmountOrSentence}`}
+        />
       <div className="flex flex-row items-center gap-5 justify-between w-full">
         <InputView
           label="Valor de outras custas"
-          value={CustaValoresValues.otherCourtCosts}
-        />
+          value={`R$ ${CustaValoresValues.otherCourtCosts}`}
+          />
         <InputView
           label="Custas pagas GC "
-          value={CustaValoresValues.gcPaidCosts}
+          value={`R$ ${CustaValoresValues.gcPaidCosts}`}
         />
       </div>
     </aside>

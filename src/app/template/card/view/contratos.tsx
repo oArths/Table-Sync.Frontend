@@ -10,7 +10,7 @@ export default function Contrato({ contratoValues }: IContrato) {
       <InputView label="Fornecedor" value={contratoValues.supplier} />
       <InputView
         label="Valor inadimplido  "
-        value={contratoValues.overdueAmount}
+        value={`R$ ${contratoValues.overdueAmount}`}
       />
       <InputView label="FO" value={contratoValues.fo} />
       <InputView label="Fim do contrato" value={contratoValues.contractEnd} />
