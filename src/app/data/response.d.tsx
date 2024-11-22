@@ -11,7 +11,6 @@ export interface Table {
   lastMovement: string;
   contractEnd: string;
   phase: string;
-  cnpj: string;
 }
 export type RootObject = Root;
 
