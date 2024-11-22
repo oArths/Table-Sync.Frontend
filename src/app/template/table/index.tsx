@@ -3,7 +3,7 @@ import { Button } from "@/app/components/button";
 import { TableType } from "@/app/data/response.d";
 import { useState } from "react";
 import { IPagination } from "./types.d";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next-nprogress-bar";
 interface TableProps {
   data: TableType;
 }

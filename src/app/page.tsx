@@ -11,9 +11,10 @@ export default function Login() {
                 src="/LogoGrenke.webp"
                 alt="Logo da Grenke"
                 fill
+                sizes="(max-width: 768px) 100px, 150px"
                 style={{ objectFit: "contain" }}
                 priority={true}
-              />
+                />
             </div>
             <h1 className=" text-base desktop:text-lg desktop-lg:text-2xl text-start py-3 text-white font-light ">
               Bem-vindo de volta! Faça login para continuar.
@@ -26,9 +27,10 @@ export default function Login() {
             src="/LoginImage.webp"
             alt="Mulher segurando um notebook"
             fill
+            sizes="(max-width: 768px) 40vw, (max-width: 1024px) 60vw, 60vw"
             style={{ objectFit: "cover" }}
-            priority={true}
             className="rounded"
+            priority={true}
           />
         </figure>
       </section>

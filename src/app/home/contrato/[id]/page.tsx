@@ -1,6 +1,7 @@
 "use client";
 import { Header } from "@/app/template/header";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
+import { useRouter } from "next-nprogress-bar";
 import { Button } from "@/app/components/button";
 import { RootState } from "@/redux/rootReducer";
 import { useSelector } from "react-redux";
@@ -85,15 +86,27 @@ export default function Contrato() {
     },
     resolver: zodResolver(ContractsContentSchema),
   });
+  useEffect(() => {
+    console.log("Estado atualizado:", editing);
+  }, [editing]);
+
   const onSubmit: SubmitHandler<ContractsContentSchema> = (data) => {
-    console.log(errors);
-    console.log(data);
+    // console.log("err",errors);
+    // console.log("data",data);
+    setEditing(false)
+    console.log('enviado')
+
   };
 
   return (
     <main className=" flex-col  w-full h-screen-minus-80   pb-20 items-start bg-primary100 justify-items-center text-white">
       <Header />
       <form
+       onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          e.preventDefault(); 
+        }
+      }}
         className="flex flex-col items-start w-11/12"
         onSubmit={handleSubmit(onSubmit)}
       >
@@ -133,7 +146,6 @@ export default function Contrato() {
               <Button
                 title="Salvar"
                 type="submit"
-                onClick={() => setEditing(false)}
                 className="bg-green200/70 w-36 h-10  "
                 loading={false}
               />
@@ -141,7 +153,7 @@ export default function Contrato() {
               <Button
                 title="Editar"
                 type="button"
-                onClick={() => setEditing(true)}
+                onClick={(e) =>(e.preventDefault(),setEditing(true)) }
                 className="bg-blue200 w-36 h-10  "
                 loading={false}
               />
