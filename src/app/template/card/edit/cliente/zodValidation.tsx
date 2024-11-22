@@ -1,26 +1,6 @@
 import { z } from "zod";
 
-const isBrazilianDate = (date: any) => {
-  const [day, month, year] = date.split("/").map(Number);
-  if (
-    !day ||
-    !month ||
-    !year ||
-    day < 1 ||
-    day > 31 ||
-    month < 1 ||
-    month > 12 ||
-    year < 1000 ||
-    year > 9999
-  ) {
-    return false;
-  }
 
-  const isoDate = new Date(
-    `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`
-  );
-  return !isNaN(isoDate.getTime()) && isoDate <= new Date();
-};
 
 const ClientSchema = z.object({
   tenant: z
@@ -49,12 +29,12 @@ const ClientSchema = z.object({
     .string({
       required_error: "O campo é obrigatória.",
     })
-    .refine(isBrazilianDate, { message: "Data inválida ou no futuro" }),
+    .refine((doc) => doc.replace(/\D/g, "").length === 8, { message: "Data inválida " }),
   kaDate: z
     .string({
       required_error: "O campo é obrigatória.",
     })
-    .refine(isBrazilianDate, { message: "Data inválida ou no futuro" }),
+    .refine((doc) => doc.replace(/\D/g, "").length === 8, { message: "Data inválida  ", }),
 });
 
 const ContractsSchema = z.object({
@@ -62,23 +42,19 @@ const ContractsSchema = z.object({
     .string()
     .min(1, { message: "O Fornecedor é obrigatório" })
     .max(200),
-  overdueAmount: z
-    .string()
-    .refine((value) => /^[0-9.,]+$/.test(value), {
-      message: "O valor deve conter apenas números",
-    }),
+  overdueAmount: z.string().refine((value) => /^[0-9.,]+$/.test(value), {
+    message: "O valor deve conter apenas números",
+  }),
   fo: z.string(),
   contractEnd: z
     .string()
-    .refine(isBrazilianDate, { message: "Data inválida ou no futuro" }),
+    .refine((doc) => doc.replace(/\D/g, "").length === 8, { message: "Data inválida ou no futuro" }),
 });
 
 const CostsAndValuesSchema = z.object({
-  initialCourtCosts: z
-    .string()
-    .refine((value) => /^[0-9.,]+$/.test(value), {
-      message: "Apenas números são permitidos",
-    }),
+  initialCourtCosts: z.string().refine((value) => /^[0-9.,]+$/.test(value), {
+    message: "Apenas números são permitidos",
+  }),
   initialEnforcementAmount: z
     .string()
     .refine((value) => /^[0-9.,]+$/.test(value), {
@@ -106,14 +82,17 @@ const ProceduralSchema = z.object({
   }),
   amountReceivedPaidToGrenke: z
     .string({
-    required_error: "O campo é obrigatória.",
-  })
+      required_error: "O campo é obrigatória.",
+    })
     .refine((value) => /^[0-9.,]+$/.test(value)),
   amountPaidByGrenke: z.string().refine((value) => /^[0-9.,]+$/.test(value)),
   phase: z.string(),
-  frContact: z.string({
-    required_error: "O campo é obrigatória.",
-  }).min(1, {message : "O campo é obrigatória."}).max(500),
+  frContact: z
+    .string({
+      required_error: "O campo é obrigatória.",
+    })
+    .min(1, { message: "O campo é obrigatória." })
+    .max(500),
 });
 
 const ProcessSchema = z.object({
@@ -139,11 +118,14 @@ const ProcessSchema = z.object({
     .string({
       required_error: "O campo é obrigatória.",
     })
-    .refine(isBrazilianDate, { message: "Data inválida" }),
+    .refine((doc) => doc.replace(/\D/g, "").length === 8, { message: "Data inválida" }),
   citation: z.string(),
-  frLastActionOrMeasures: z.string({
-    required_error: "O campo é obrigatória.",
-  }).min(1).max(500),
+  frLastActionOrMeasures: z
+    .string({
+      required_error: "O campo é obrigatória.",
+    })
+    .min(1)
+    .max(500),
 });
 
 export const ContractsContentSchema = z.object({

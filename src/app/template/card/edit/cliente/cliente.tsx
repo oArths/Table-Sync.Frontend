@@ -4,6 +4,7 @@ import InputMask from "@/app/components/input/InputMask";
 import {  Controller } from "react-hook-form";
 import Options from "@/app/components/dropdown/option";
 import { useState } from "react";
+import { autoCorrectedDatePipe } from './../mask';
 interface ICliente {
   register: any;
   errors: any | undefined;
@@ -65,21 +66,37 @@ export default function Cliente({
           ref={register("client.status").ref}
         />
       </div>
-      <div className="flex flex-row items-center gap-5 justify-between w-full">
-        <InputEdit
+      <div className="flex flex-row items-center gap-5 justify-between w-full">   
+        <Controller
+        name="client.inclusionInLegalControl"
+        control={control}
+        render={({ field }) => (
+          <InputMask
           label="Inclusão na Legal Control"
-          id="inclusionInLegalControl"
-          errorsType={errors.client?.inclusionInLegalControl}
-          errorsMessage={errors.client?.inclusionInLegalControl?.message}
-          {...register("client.inclusionInLegalControl")}
-        />
-        <InputEdit
+            mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}
+            pipe={autoCorrectedDatePipe}
+            value={field.value || ""}
+            onChange={field.onChange} 
+            errorsType={errors.client?.inclusionInLegalControl}
+            errorsMessage={errors.client?.inclusionInLegalControl?.message}
+          />
+        )}
+      />
+        <Controller
+        name="client.kaDate"
+        control={control}
+        render={({ field }) => (
+          <InputMask
           label="Data KA"
-          id="kaDate"
-          errorsType={errors.client?.kaDate}
-          errorsMessage={errors.client?.kaDate?.message}
-          {...register("client.kaDate")}
-        />
+            mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}
+            pipe={autoCorrectedDatePipe}
+            value={field.value || ""}
+            onChange={field.onChange} 
+            errorsType={errors.client?.kaDate}
+            errorsMessage={errors.client?.kaDate?.message}
+          />
+        )}
+      />
       </div>
     </aside>
   );
