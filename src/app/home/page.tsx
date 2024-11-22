@@ -20,7 +20,6 @@ export default function Home() {
     setSearchValue,
     handleSelect,
     filteredData,
-    menu,
   } = useLogic();
 
   const Upload = dynamic(() => import("../template/upload"), {
@@ -32,9 +31,7 @@ export default function Home() {
 
   return (
     <div
-      className={`flex-col  w-full h-screen-minus-80   pb-20 items-start bg-primary100 justify-items-center  transition-all delay-200 ${
-        (download || upload || menu) && "overflow-y-hidden"
-      }`}
+      className={`flex-col  w-full h-screen-minus-80   pb-20 items-start bg-primary100 justify-items-center  transition-all delay-200 `}
     >
       <Header />
       <h1 className="w-11/12 mt-11 text-white text-5xl text-left font-medium">

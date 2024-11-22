@@ -14,16 +14,16 @@ const useLogic = () => {
   const [upload, setUpload] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<string[]>(Options);
   const [searchValue, setSearchValue] = useState("");
-
   const dispatch = useDispatch();
-
+  
   dispatch(setInitialResponse(response));
+
   const responseClear = useSelector((state: RootState) =>
     simplifiedResponseSelector(state)
   );
+
   const [filteredData, setFilteredData] = useState(responseClear);
 
-  const menu = useSelector((state: RootState) => state.menu.open);
 
   const normalizeString = (str: string) => {
     return str
@@ -79,7 +79,6 @@ const useLogic = () => {
     searchValue,
     setSearchValue,
     handleSelect,
-    menu,
   };
 };
 
