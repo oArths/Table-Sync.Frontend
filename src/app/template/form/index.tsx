@@ -4,8 +4,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { Button } from "@/app/components/button";
+import { useRouter } from "next/navigation";
 export default function Form() {
   const [loading, setLoading] = useState(false);
+  const router = useRouter()
   const {
     register,
     handleSubmit,
@@ -17,7 +19,8 @@ export default function Form() {
 
   const Send = async (data: UserContent) => {
     setLoading(true);
-    return console.log(data);
+    router.push("/home")
+
   };
   return (
     <form
