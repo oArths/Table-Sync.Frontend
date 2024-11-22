@@ -35,7 +35,7 @@ export default function Form() {
           </label>
           <input
             id="email"
-            type="email"
+            type="text"
             autoComplete="off"
             placeholder="email@gmail.com"
             {...register("email")}
