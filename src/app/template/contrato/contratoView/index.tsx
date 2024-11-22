@@ -27,26 +27,31 @@ export default function ContratoView({ Contracts }: IContratoView) {
     <div className="w-full h-auto border border-solid border-primary300 bg-primary200 rounded  flex flex-col items-center justify-center">
       <nav className="flex flex-row items-center justify-around  w-full h-auto">
         <Option
+          type="button"
           label="Cliente"
           active={"cliente" === activeTable}
           onClick={() => setActiveTable("cliente")}
         />
         <Option
+          type="button"
           label="Contratos"
           active={"contratos" === activeTable}
           onClick={() => setActiveTable("contratos")}
         />
         <Option
+          type="button"
           label="Custas e Valores"
           active={"custasValores" === activeTable}
           onClick={() => setActiveTable("custasValores")}
         />
         <Option
+          type="button"
           label="Processuais"
           active={"processuais" === activeTable}
           onClick={() => setActiveTable("processuais")}
         />
         <Option
+          type="button"
           label="Processo"
           active={"processo" === activeTable}
           onClick={() => setActiveTable("processo")}
