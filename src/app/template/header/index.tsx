@@ -10,7 +10,7 @@ export const Header = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector((state: RootState) => state.menu.open);
   const handleClick = () => {
-    dispatch(setStateMenu(isOpen));
+    dispatch(setStateMenu(!isOpen));
   };
 
     return (
