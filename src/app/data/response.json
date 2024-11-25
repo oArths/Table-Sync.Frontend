@@ -39,7 +39,7 @@
       "newProcessNumber": "141.585.745-9",
       "agreementMade": "Não",
       "causeValue": "9.500,00",
-      "lastMovement": "10/11/2024",
+      "lastMovement": "10/05/2025",
       "citation": "Não",
       "frLastActionOrMeasures": "Donec vehicula erat sit amet lacus fermentum consectetur. In ut ante et odio ultricies molestie. Donec semper volutpat mi a hendrerit. Donec dolor tellus, consequat eu ipsum at, rhoncus rutrum enim. Vestibulum condimentum risus ac eros mattis scelerisque. Vivamus a malesuada neque. Phasellus blandit scelerisque felis vel tempus."
     }
@@ -47,7 +47,7 @@
   {
     "id": "2",
     "client": {
-      "tenant": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "tenant": "ALPHA EQUIPAMENTOS DE INFORMATICA",
       "cnpj": "42.547.874/0001-69",
       "clientNumber": 63197,
       "status": "KA",
@@ -92,7 +92,7 @@
   {
     "id": "3",
     "client": {
-      "tenant": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "tenant": "TECH SOLUTIONS ",
       "cnpj": "42.547.874/0001-69",
       "clientNumber": 69435,
       "status": "KU",
@@ -137,7 +137,7 @@
   {
     "id": "4",
     "client": {
-      "tenant": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "tenant": "DIGITAL WORLD",
       "cnpj": "42.547.874/0001-69",
       "clientNumber": 69877,
       "status": "KL",
@@ -182,7 +182,7 @@
   {
     "id": "5",
     "client": {
-      "tenant": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "tenant": "SMART ELETRONICS",
       "cnpj": "42.547.874/0001-69",
       "clientNumber": 63197,
       "status": "KA",
@@ -227,7 +227,7 @@
   {
     "id": "6",
     "client": {
-      "tenant": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "tenant": "INOVA TECH",
       "cnpj": "42.547.874/0001-69",
       "clientNumber": 69435,
       "status": "KU",
@@ -272,7 +272,7 @@
   {
     "id": "7",
     "client": {
-      "tenant": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "tenant": "ELETRONIX",
       "cnpj": "42.547.874/0001-69",
       "clientNumber": 69877,
       "status": "KL",
@@ -317,7 +317,7 @@
   {
     "id": "8",
     "client": {
-      "tenant": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "tenant": "CLOUD SOLUTIONS",
       "cnpj": "42.547.874/0001-69",
       "clientNumber": 63197,
       "status": "KA",
@@ -362,7 +362,7 @@
   {
     "id": "9",
     "client": {
-      "tenant": "NEWVIEW COM DE EQUIPAMENTOS DE INFORMATICA",
+      "tenant": "DATA SCIENCE BRASIL ",
       "cnpj": "42.547.874/0001-69",
       "clientNumber": 69435,
       "status": "KU",
