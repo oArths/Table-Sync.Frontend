@@ -1,6 +1,7 @@
 "use client";
 import Modal from "@/app/components/modal";
 import { Button } from "@/app/components/button";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 interface IMenu {
   open: boolean;
@@ -11,6 +12,7 @@ interface IMenu {
 
 export const Menu: React.FC<IMenu> = (props) => {
   const [loading, setLoading] = useState(false);
+  const router = useRouter()
 
   return (
     <Modal isOpen={props.open}>
@@ -27,7 +29,7 @@ export const Menu: React.FC<IMenu> = (props) => {
           <Button
             loading={loading}
             disabled={loading}
-            onClick={() => setLoading(!loading)}
+            onClick={() => (setLoading(!loading),router.push('/'), props.close )}
             className="h-7 bg-red100/70 font-medium text-sm  w-4/5 "
             title={loading ? "" : "Sair"}
           />

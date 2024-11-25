@@ -10,7 +10,7 @@ export const Button: React.FC<IButton> = ({loading,className, title, ...props}) 
   return (
     <button
     className={clsx(
-      `flex items-center py-2 align-middle bg-blue270 text-white   text-center  justify-center rounded font-medium
+      `flex items-center py-2 align-middle bg-blue270 text-white desktop-xl:text-lg  ultrawide:text-xl  4k:text-2xl   text-center  justify-center rounded font-medium
       ${loading && "opacity-50 cursor-not-allowed"} 
       `,
       className

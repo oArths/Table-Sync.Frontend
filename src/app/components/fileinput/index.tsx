@@ -51,27 +51,27 @@ const Input = ({ dropzone }: InputProps) => {
   return (
     <div
       {...getRootProps()}
-      className={`flex flex-col items-center justify-center w-full h-full  transition-all delay-100 ease-linear border-2 border-dashed  border-gray300/50 hover:border-gray400/50  bg-primary350/30 hover:bg-primary400/30 rounded-md cursor-pointer
+      className={`flex flex-col items-center justify-center w-full min-h-[300px] ultrawide:min-h-[500px] transition-all delay-100 ease-linear border-2 border-dashed  border-gray300/50 hover:border-gray400/50  bg-primary350/30 hover:bg-primary400/30 rounded-md cursor-pointer
       ${isDragActive ? "border-blue-500" : "border-gray-600"}`}
     >
-      <label htmlFor="dropzone-file" className="cursor-pointer w-full h-full">
+      <label htmlFor="dropzone-file" className="cursor-pointer w-full h-full ">
         <div className="flex flex-col items-center justify-center pt-5 pb-6 w-full h-full">
           <I.UploadIcon
             color="rgb(212, 212, 212)"
-            className={`w-10 h-10 mb-3  ${
+            className={`w-10 h-10 mb-3 desktop-xl:h-14 desktop-xl:w-14  ultrawide:h-20 ultrawide:w-20 ${
               isDragActive ? "text-blue-500" : "text-gray-400"
             }`}
           />
           {isDragActive ? (
-            <p className="text-sm font-normal text-gray500 select-none ">
+            <p className="text-sm  desktop-xl:text-base  ultrawide:text-lg  4k:text-xl font-normal text-gray500 select-none ">
               Solte para adicionar
             </p>
           ) : (
             <>
-              <h3 className="text-sm font-normal text-gray500 select-none ">
+              <h3 className="text-sm desktop-xl:text-base  ultrawide:text-lg  4k:text-xl font-normal text-gray500 select-none ">
                 solte seus arquivos ou clique aqui
               </h3>
-              <p className="text-xs font-normal text-gray300  select-none">
+              <p className="text-xs desktop-xl:text-sm  ultrawide:text-base  4k:text-lg font-normal text-gray300  select-none">
                 formatos suportados: xlsx, xls e xlsm
               </p>
             </>
@@ -94,18 +94,18 @@ const HasFile = ({ file, removeFile, sendFile, progress }: HasFileProps) => {
   }
 
   return (
-    <div className="w-full h-full  flex  flex-col justify-between items-center">
-      <div className="bg-primary300 w-full rounded-md shadow-md flex flex-col mt-10  overflow-hidden">
-        <div className="w-full flex flex-row items-center justify-start px-4 gap-3 ">
+    <div className="w-full h-full  flex  flex-col justify-between items-center space-y-10">
+      <div className="bg-primary300 w-full rounded-md shadow-md flex flex-col   overflow-hidden">
+        <div className="w-full flex flex-row items-center justify-center px-4 gap-3 ">
           <p className="  flex items-center p-2 justify-center rounded bg-primary200">
-            <I.FileText className="text-gray500 w-5 h-5 " />
+            <I.FileText className="text-gray500 w-5 h-5 desktop-xl:h-8 desktop-xl:w-8  ultrawide:h-10 ultrawide:w-10 " />
           </p>
           <span className="flex flex-col w-full my-4 ">
-            <p className="text-sm text-gray500 ">{file?.name}</p>
+            <p className="text-sm desktop-xl:text-base  ultrawide:text-lg  4k:text-xl text-gray500 ">{file?.name}</p>
             {progress ? (
-              <p className="text-xs text-gray500 ">{progress}%</p>
+              <p className="text-xs desktop-xl:text-sm  ultrawide:text-base  4k:text-lg  text-gray500 ">{progress}%</p>
             ) : (
-              <p className="text-xs text-gray500 ">
+              <p className="text-xs desktop-xl:text-sm  ultrawide:text-base  4k:text-lg  text-gray500 ">
                 {formatFileSize(file?.size)}
               </p>
             )}
@@ -115,7 +115,7 @@ const HasFile = ({ file, removeFile, sendFile, progress }: HasFileProps) => {
             onClick={removeFile}
             className="place-self-center ml-auto mr-4 p-1"
           >
-            <I.XCircle className="w-5 h-5  " color="rgb(211, 47, 47)" />
+            <I.XCircle className="w-5 h-5 desktop-xl:h-6 desktop-xl:w-6  ultrawide:h-8 ultrawide:w-8  " color="rgb(211, 47, 47)" />
           </button>
         </div>
         <div
@@ -131,7 +131,7 @@ const HasFile = ({ file, removeFile, sendFile, progress }: HasFileProps) => {
           file && sendFile(file);
           setLoading(!loading);
         }}
-        className=" bg-blue270 h-10 font-medium text-sm w-full"
+        className=" bg-blue270 h-10 ultrawide:h-14  font-medium text-sm w-full"
         title={loading ? "" : "Enviar"}
       />
     </div>

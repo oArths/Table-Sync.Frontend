@@ -54,27 +54,27 @@ const Upload: React.FC<IUpload> = (props) => {
       >
         <aside
           onClick={(e) => e.stopPropagation()}
-          className={`flex flex-col items-center justify-start  w-2/5 h-4/5  rounded  bg-primary100  border border-solid border-black400 ${
+          className={`flex flex-col items-center justify-start  w-2/5 h-auto  max-h-[900px] rounded  bg-primary100  border border-solid border-black400 ${
             props.open ? " animate-fadeInDown" : "animate-fadeOutUp "
           }`}
         >
-          <div className="w-4/5 flex flex-col items-start py-5">
-            <aside className="flex w-full flex-row items-center justify-between">
-              <h1 className="text-left h-auto text-3xl w-auto text-white  font-regular">
-                Atualizar Tabela
-              </h1>
+          <div className="w-4/5 flex flex-col items-start pb-10 pt-5 desktop:pt-7 desktop-xl:pt-10  ultrawide:pt-15 ">
+          <aside className="flex w-full flex-row items-center justify-end">
               <div
                 onClick={(e) => handleClick(e)}
-                className="fle w-7 h-full cursor-pointer  "
+                className="w-7 h-7  cursor-pointer  desktop-xl:h-10 desktop-xl:w-10  "
               >
-                <I.X width="30px" height="30px" color="rgb(212, 212, 212)" />
+                <I.X width="100%" height="100%" color="rgb(212, 212, 212)" />
               </div>
             </aside>
-            <h2 className="text-left text-base h-auto mt-2 font-normal text-white  ">
+              <h1 className="text-left h-auto text-3xl desktop-xl:text-4xl 4k:text-5xl w-auto text-white  font-regular">
+                Atualizar Tabela
+              </h1>
+            <h2 className="text-left text-base ultrawide:text-lg 4k:text-2xl h-auto mt-2 font-normal text-white  ">
               Selecione um arquivo em Excel, com base no modelo da Legal Control
             </h2>
           </div>
-          <form className="w-4/5 h-3/5">
+          <form className="w-4/5 h-3/5 pb-10  ultrawide:pb-20 ">
             <FileInput
               FileSelect={(selectedFile: File | null) => (
                 setFile(selectedFile), SendFile(selectedFile)

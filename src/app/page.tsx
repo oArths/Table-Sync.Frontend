@@ -16,18 +16,18 @@ export default function Login() {
                 priority={true}
                 />
             </div>
-            <h1 className=" text-base desktop:text-lg desktop-lg:text-2xl text-start py-3 text-white font-light ">
+            <h1 className=" text-base desktop:text-lg desktop-lg:text-2xl ultrawide:text-4xl text-start py-3 text-white font-light ">
               Bem-vindo de volta! Faça login para continuar.
             </h1>
           </header>
-          <Form />
+          <Form /> 
         </aside>
         <figure className="relative max-laptop:w-6/12  w-8/12 h-full">
           <SuspenseImage
             src="/LoginImage.webp"
             alt="Mulher segurando um notebook"
             fill
-            sizes="(max-width: 768px) 40vw, (max-width: 1024px) 60vw, 60vw"
+            sizes="(max-width: 768px) 40vw, (max-width: 1024px) 60vw, 80vw"
             style={{ objectFit: "cover" }}
             className="rounded"
             priority={true}

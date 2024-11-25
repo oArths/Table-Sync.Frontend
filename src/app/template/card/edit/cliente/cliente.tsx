@@ -24,7 +24,7 @@ export default function Cliente({
   const [optionState, setOptionState] = useState(false);
 
   return (
-    <aside className=" flex flex-col items-center justify-around gap-y-5  pt-8 pb-20 w-10/12 h-full">
+    <aside className=" flex flex-col items-center justify-around gap-y-5  desktop-xl:gap-y-7  ultrawide:gap-y-9  4k:gap-y-12   pt-8 desktop-xl:pt-10  ultrawide:pt-12  4k:pt-14 pb-20 w-10/12 h-full">
       <InputEdit
         label="Locatatio"
         id="tenant"

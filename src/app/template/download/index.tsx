@@ -34,23 +34,24 @@ const Download: React.FC<IDownload> = (props) => {
       >
         <aside
           onClick={(e) => e.stopPropagation()}
-          className={`flex flex-col items-center justify-start  w-2/6 h-3/6  rounded  bg-primary100  border border-solid border-black400 ${
+          className={`flex flex-col items-center justify-start  w-2/6 h-auto  space-y-10 pb-10 rounded  bg-primary100  border border-solid border-black400 ${
             props.open ? " animate-fadeInDown" : "animate-fadeOutUp "
           }`}
         >
           <div className="w-4/5 flex flex-col items-start mb-auto  mt-10">
-            <aside className="flex w-full flex-row items-center justify-between">
-              <h1 className="text-left h-auto text-3xl w-auto text-white  font-regular">
-                Baixar Tabela
-              </h1>
+            <aside className="flex w-full flex-row items-center justify-end ">
               <div
                 onClick={props.close}
-                className="fle w-7 h-full cursor-pointer  "
+                className="fle w-7 h-7 cursor-pointer ultrawide:h-10  ultrawide:w-10 "
               >
-                <I.X width="30px" height="30px" color="rgb(212, 212, 212)" />
+              <I.X width="100%" height="100%+
+              " color="rgb(212, 212, 212)" />
               </div>
-            </aside>
-            <h2 className="text-left  text-base h-auto mt-3 font-normal text-white  ">
+              </aside>
+              <h1 className="text-left h-auto text-3xl desktop-xl:text-4xl 4k:text-5xl w-auto text-white  font-regular">
+                Baixar Tabela
+              </h1>
+            <h2 className="text-left  text-base ultrawide:text-lg 4k:text-2xl h-auto mt-3 font-normal text-white  ">
               Selecione o periodo que deseja baixar
             </h2>
           </div>
@@ -62,7 +63,7 @@ const Download: React.FC<IDownload> = (props) => {
             loading={loading}
             disabled={loading}
             onClick={() => setLoading(!loading)}
-            className=" bg-blue270 h-10 font-medium text-sm mt-auto mb-10 w-4/5   "
+            className=" bg-blue270 h-10 ultrawide:h-14  font-medium text-sm mt-auto mb-10 w-4/5   "
             title={loading ? "" : "Baixar"}
           />
         </aside>

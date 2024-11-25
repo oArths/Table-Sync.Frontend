@@ -16,7 +16,7 @@ interface IOption {
       <label className="font-medium text-base   text-white">{label}</label>
       <p
         onClick={onClick}
-        className={`cursor-pointer select-none   text-white  p-2 text-sm  h-10 flex flex-row items-center justify-between w-full bg-black200 border border-solid  border-gray200 rounded`}
+        className={`cursor-pointer select-none   text-white  p-2 text-sm desktop-xl:text-base  ultrawide:text-lg  4k:text-xl  h-10 desktop-xl:h-12  ultrawide:h-14  4k:h-16  flex flex-row items-center justify-between w-full bg-black200 border border-solid  border-gray200 rounded`}
       >
         {select}
         <I.ChevronDown
@@ -42,8 +42,8 @@ interface IOption {
               <p
                 key={index}
                 onClick={() => onSelect(value)}
-                className={`flex flex-row items-center px-2 font-regular text-base text-gray500 justify-between w-11/12 rounded-sm hover:bg-primary400 cursor-pointer select-none ${
-                  index === 0 ? "mt-2" : "" // Adiciona margem no primeiro item
+                className={`flex flex-row items-center px-2 font-regular text-base desktop-xl:text-lg  ultrawide:text-xl  4k:text-2xl text-gray500 justify-between w-11/12 rounded-sm hover:bg-primary400 cursor-pointer select-none ${
+                  index === 0 ? "mt-2" : "" 
                 }`}              >
                 {value}
                 {value === select && (
