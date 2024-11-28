@@ -3,6 +3,8 @@ import { useRef } from "react";
 import { Provider } from "react-redux";
 import { makeStore, AppStore } from "../redux/store";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
+import { SessionProvider } from "next-auth/react";
+
 
 export default function StoreProvider({
   children,
@@ -16,6 +18,7 @@ export default function StoreProvider({
 
   return (
     <Provider store={storeRef.current}>
+      <SessionProvider>
       {children}
       <ProgressBar
         height="4px"
@@ -23,6 +26,7 @@ export default function StoreProvider({
         options={{ showSpinner: false }}
         shallowRouting
       />
+      </SessionProvider>
     </Provider>
   );
 }
