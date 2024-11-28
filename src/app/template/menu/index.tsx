@@ -1,8 +1,9 @@
 "use client";
 import Modal from "@/app/components/modal";
 import { Button } from "@/app/components/button";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { signOut } from "next-auth/react";
+
 interface IMenu {
   open: boolean;
   name: string;
@@ -12,7 +13,16 @@ interface IMenu {
 
 export const Menu: React.FC<IMenu> = (props) => {
   const [loading, setLoading] = useState(false);
-  const router = useRouter()
+
+  const  HandleClose = async() => {
+    setLoading(true)
+    console.log("fachar")
+    await signOut({ redirect: true, callbackUrl: "/" });
+      props.close() 
+      setLoading(false)
+    console.log("fechou")
+  
+  }
 
   return (
     <Modal isOpen={props.open}>
@@ -29,7 +39,7 @@ export const Menu: React.FC<IMenu> = (props) => {
           <Button
             loading={loading}
             disabled={loading}
-            onClick={() => (setLoading(!loading),router.push('/'), props.close )}
+            onClick={() => HandleClose()}
             className="h-7 bg-red100/70 font-medium text-sm  w-4/5 "
             title={loading ? "" : "Sair"}
           />

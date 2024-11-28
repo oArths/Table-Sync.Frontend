@@ -4,12 +4,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { Button } from "@/app/components/button";
-import { useRouter } from "next/navigation";
-import { UserInstance } from "@/app/services";
+import { signIn } from "next-auth/react";
 export default function Form() {
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
-  const usuarios = new UserInstance();
   const {
     register,
     handleSubmit,
@@ -21,15 +18,11 @@ export default function Form() {
 
   const Send = async (data: UserContent) => {
     setLoading(true);
-    try {
-      const user = await usuarios.LoginUser(data);
-      console.log(user);
-      // router.push("/home")
-    } catch (err) {
-      console.log(err);
-    } finally {
+    const user = await signIn("credentials", {
+      ...data,
+        callbackUrl: "/home",
+      });   
       setLoading(false);
-    }
   };
   return (
     <form

@@ -99,7 +99,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
                     : "bg-pink100 text-pink200";
 
                 return (
-                  <p className={`p-1 text-center rounded ${colors}`}> {date}</p>
+                  <p className={`p-1 text-center rounded truncate ${colors}`}> {date}</p>
                 );
               };
 
