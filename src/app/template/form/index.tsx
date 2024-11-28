@@ -5,9 +5,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { Button } from "@/app/components/button";
 import { useRouter } from "next/navigation";
+import { UserInstance } from "@/app/services";
 export default function Form() {
   const [loading, setLoading] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
+  const usuarios = new UserInstance();
   const {
     register,
     handleSubmit,
@@ -19,8 +21,15 @@ export default function Form() {
 
   const Send = async (data: UserContent) => {
     setLoading(true);
-    router.push("/home")
-
+    try {
+      const user = await usuarios.LoginUser(data);
+      console.log(user);
+      // router.push("/home")
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <form
@@ -30,7 +39,10 @@ export default function Form() {
       <fieldset className="flex flex-col align-top space-y-5 desktop-lg:space-y-8 ultrawide:space-y-12 4k:space-y-20  ">
         <legend className="sr-only">Formulário de Login</legend>
         <div>
-          <label htmlFor="email" className=" text-base ultrawide:text-2xl text-white font-regular">
+          <label
+            htmlFor="email"
+            className=" text-base ultrawide:text-2xl text-white font-regular"
+          >
             Email
           </label>
           <input
@@ -44,7 +56,9 @@ export default function Form() {
 
           <div className="h-1 mt-1">
             {errors.email && (
-              <p className="text-xs ultrawide:text-base font-bold text-red300/70  ">{errors.email.message}</p>
+              <p className="text-xs ultrawide:text-base font-bold text-red300/70  ">
+                {errors.email.message}
+              </p>
             )}
           </div>
         </div>
@@ -66,7 +80,9 @@ export default function Form() {
           />
           <div className="h-1 mt-1">
             {errors.password && (
-              <p className="text-xs ultrawide:text-base font-bold text-red300/70 ">{errors.password?.message}</p>
+              <p className="text-xs ultrawide:text-base font-bold text-red300/70 ">
+                {errors.password?.message}
+              </p>
             )}
           </div>
         </div>
