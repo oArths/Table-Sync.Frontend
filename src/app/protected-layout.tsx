@@ -13,12 +13,18 @@ const ProtectedLayout: React.FC<ProtectedLayoutProps> = ({ children }) => {
 
   useEffect(() => {
     if (status === "unauthenticated") {
-      router.push("/"); 
+      router.push("/");
     }
   }, [status, router]);
 
   if (status === "loading") {
-    return <div className=" absolute top-0  h-screen w-full bg-primary300/50 flex items-center justify-center text-white  text-3xl">Loading...</div>; 
+    return (
+      <div className=" absolute top-0  h-screen w-full bg-primary300/50 flex items-center justify-center text-white  text-3xl">
+        <div
+          className={`w-5 h-5 border-1 border-solid border-t-gray200 border-gray-300 rounded-full mr-2 animate-spin`}
+        ></div>
+      </div>
+    );
   }
 
   return <>{children}</>;
