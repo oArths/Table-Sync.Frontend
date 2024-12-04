@@ -26,13 +26,13 @@ const Table: React.FC<TableProps> = ({ data }) => {
               className="text-white font-medium text-base text-center truncate px-4  "
               scope="col"
             >
-              Número do Cliente
+            Número do Processo
             </th>
             <th
               className="text-white font-medium text-base text-center truncate px-4 "
               scope="col"
             >
-              Número do Processo
+              Número do Cliente
             </th>
             <th
               className="text-white font-medium text-base text-center truncate px-4 "

@@ -2,27 +2,44 @@
 import { UserContent } from "../../zodValidation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/app/components/button";
 import { signIn } from "next-auth/react";
+import { useSearchParams } from "next/navigation";
 export default function Form() {
   const [loading, setLoading] = useState(false);
+  const params = useSearchParams();
+  const error = params.get("error");
   const {
     register,
     handleSubmit,
     formState: { errors },
+    setError,
     reset,
   } = useForm<UserContent>({
     resolver: zodResolver(UserContent),
   });
 
+  useEffect(() => {
+    if (error === "CredentialsSignin") {
+      setError("email", {
+        type: "manual",
+        message: "Credenciais inválidas",
+      });
+      setError("password", {
+        type: "manual",
+        message: "Credenciais inválidas",
+      });
+    }
+  }, [error]);
+
   const Send = async (data: UserContent) => {
     setLoading(true);
     const user = await signIn("credentials", {
       ...data,
-        callbackUrl: "/home",
-      });   
-      setLoading(false);
+      callbackUrl: "/home",
+    });
+    setLoading(false);
   };
   return (
     <form
@@ -80,7 +97,6 @@ export default function Form() {
           </div>
         </div>
       </fieldset>
-
       <Button
         loading={loading}
         disabled={loading}
